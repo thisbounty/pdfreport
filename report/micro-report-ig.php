@@ -334,27 +334,27 @@
               <div class="col-sm-6 col-custom">
               <div class="people-pie-chart">
                 <div class="overview-key-title">
-                  <b><h3=style="margin-bottom:5px;">Total Posting</b></h3>
+                  <h3 style="margin-bottom:5px;">Total Posting</h3>
                   <ol>
                     <li class="wrapResumeIG">will be filled by text, max 255 characters here</li>
                   </ol>
 
-                  <b><h3=style="margin-bottom:5px;">Interaksi</b></h3>
+                  <h3 style="margin-bottom:5px;">Interaksi</h3>
                   <ol>
                     <li class="wrapResumeIG">will be filled by text, max 255 characters here</li>
                   </ol>
 
-                  <b><h3=style="margin-bottom:5px;">Pemilihan kata/konten</b></h3>
+                  <h3 style="margin-bottom:5px;">Pemilihan kata/konten</h3>
                   <ol>
                     <li class="wrapResumeIG">will be filled by text, max 255 characters here</li>
                   </ol>
 
-                  <b><h3=style="margin-bottom:5px;">Media Type</b></h3>
+                  <h3 style="margin-bottom:5px;">Media Type</h3>
                   <ol>
                     <li class="wrapResumeIG">will be filled by text, max 255 characters here</li>
                   </ol>
 
-                  <b><h3=style="margin-bottom:5px;">Hashtag Campaign</b></h3>
+                  <h3 style="margin-bottom:5px;">Hashtag Campaign</h3>
                   <ol>
                     <li class="wrapResumeIG">will be filled by text, max 255 characters here</li>
                   </ol>

@@ -246,33 +246,31 @@
                       <h4 style="margin-bottom:5px;"><b>Saran & Tugas Minggu ini</b></h4>
                       <p class="top-writing">Rangkuman informasi mengenai aktivitas yang terjadi pada akun Twitter.</p>
                       <br />
-                     <b><h3=style="margin-bottom:5px;">Total Posting</b></h3>
+                     <h3 style="margin-bottom:5px;">Total Posting</h3>
                       <ol>
                        <li>will be filled by text, max 255 characters here</li>
                       </ol>
 
-                      <b><h3=style="margin-bottom:5px;">Interaksi</b></h3>
-                      <ol>
-                       <li>will be filled by text, max 255 characters here</li>
-                      </ol>
-
-
-                      <b><h3=style="margin-bottom:5px;">Pemilihan kata/konten</b></h3>
-                      <ol>
-                       <li>will be filled by text, max 255 characters here</li>
-                      </ol>
-
-                      <b><h3=style="margin-bottom:5px;">Media Type</b></h3>
-                      <ol>
-                       <li>will be filled by text, max 255 characters here</li>
-                      </ol>
-
-                      <b><h3=style="margin-bottom:5px;">Hastag Campaign</b></h3>
+                      <h3 style="margin-bottom:5px;">Interaksi</h3>
                       <ol>
                        <li>will be filled by text, max 255 characters here</li>
                       </ol>
 
 
+                      <h3 style="margin-bottom:5px;">Pemilihan kata/konten</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+
+                      <h3 style="margin-bottom:5px;">Media Type</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+
+                      <h3 style="margin-bottom:5px;">Hastag Campaign</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
                     </div>
 
                 </div>
@@ -299,9 +297,10 @@
             </div>
           </div>
         </div>
-        <br\><br\><br\>
+        <br/><br/><br/>
         <!-- End of content -->
       </div>
+	 </div>
 
 
 

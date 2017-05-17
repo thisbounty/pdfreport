@@ -40,6 +40,7 @@ $jsonIG = "instagram-billyboen.json";
       .highcharts-no-data text{
         font-size: 20px !important;
       }
+	  .page-break {page-break-after: always;}
     </style>
   </head>
 
@@ -51,7 +52,7 @@ $jsonIG = "instagram-billyboen.json";
          <div class="row-fluid">
           <div class="col-xs-12">
 
-<br\><br\><br\><br\>
+<br/><br/><br/><br/>
             <img src="images/LogoSocialMeter-2.png" class="logo-genesis img-responsive" style="margin: 0 auto;" />
              <img src="images/logo-sample.png" class="logo-media img-responsive" style="margin: 0 auto;" />
 

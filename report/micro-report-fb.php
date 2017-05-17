@@ -36,11 +36,11 @@ if ($json->totalPosting < 7) {
 
    <!--pages 1 -->
    <div class="pages-facebook">
-   <br\>
-   <br\>
-   <br\>
-   <br\>
-   <br\>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
   <!--header-->
         <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
           <div class="col-xs-10 col-xs-offset-1">
@@ -229,7 +229,7 @@ if ($json->totalPosting < 7) {
 
          <!--footer-->
         <div class="row-fluid">
-        <br\><br\><br\><br\><br\><br\><br\><br\><br\>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
           <div class="col-xs-10 col-xs-offset-1 footer">
             <div class="well tweets">
               <div class="row">
@@ -244,7 +244,7 @@ if ($json->totalPosting < 7) {
                 </div>
               </div>
             </div>
-                <br/><br/>
+            <br/><br/>
 
           </div>
         </div>
@@ -308,31 +308,30 @@ if ($json->totalPosting < 7) {
                   <div class="row">
                     <div class="col-xs-9">
 
-                      <h4 style="margin-bottom:5px;"><b>Saran & Tugas Minggu ini</b></h4>
+                      <h4 style="margin-bottom:5px;">Saran & Tugas Minggu ini</h4>
                       <p class="top-writing">Rangkuman informasi mengenai aktivitas yang terjadi pada akun Twitter.</p>
                       <br />
-                     <b><h3=style="margin-bottom:5px;">Total Posting</b></h3>
+                      <h3 style="margin-bottom:5px;">Total Posting</h3>
                       <ol>
                        <li>will be filled by text, max 255 characters here</li>
                       </ol>
 
-                      <b><h3=style="margin-bottom:5px;">Interaksi</b></h3>
+                      <h3 style="margin-bottom:5px;">Interaksi</h3>
                       <ol>
                        <li>will be filled by text, max 255 characters here</li>
                       </ol>
 
-
-                      <b><h3=style="margin-bottom:5px;">Pemilihan kata/konten</b></h3>
+                      <h3 style="margin-bottom:5px;">Pemilihan kata/konten</h3>
                       <ol>
                        <li>will be filled by text, max 255 characters here</li>
                       </ol>
 
-                      <b><h3=style="margin-bottom:5px;">Media Type</b></h3>
+                      <h3 style="margin-bottom:5px;">Media Type</h3>
                       <ol>
                        <li>will be filled by text, max 255 characters here</li>
                       </ol>
 
-                      <b><h3=style="margin-bottom:5px;">Hastag Campaign</b></h3>
+                      <h3 style="margin-bottom:5px;">Hastag Campaign</h3>
                       <ol>
                        <li>will be filled by text, max 255 characters here</li>
                       </ol>
