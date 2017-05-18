@@ -46,7 +46,7 @@ $jsonIG = "instagram-billyboen.json";
 
   <body>
 
-   <div class="pages">
+   <div class="pages page-break">
        <!--header sample LOGO-SOCIALMETER-->
 
          <div class="row-fluid">
