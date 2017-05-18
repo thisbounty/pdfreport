@@ -34,8 +34,9 @@
 
 
     <!-- Page -->
-    <div class="pages">
+    <div class="pages page-break">
       <!--header-->
+      <br/>
         <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
           <div class="col-xs-10 col-xs-offset-1">
             <div class="well tweets">
@@ -229,6 +230,7 @@
   <div class="pages">
 
     <!--header-->
+      <br/>
         <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
           <div class="col-xs-10 col-xs-offset-1">
             <div class="well tweets">
@@ -396,8 +398,6 @@
         <!-- End of content -->
     </div>
     <!-- Page -->
-
-  </div>
 
 <script type="text/javascript">
   /*<![CDATA[*/

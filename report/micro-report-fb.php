@@ -35,13 +35,9 @@ if ($json->totalPosting < 7) {
 ?>
 
    <!--pages 1 -->
-   <div class="pages-facebook">
-   <br/>
-   <br/>
-   <br/>
-   <br/>
-   <br/>
+   <div class="pages-facebook page-break">
   <!--header-->
+        <br/>
         <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
           <div class="col-xs-10 col-xs-offset-1">
             <div class="well tweets">
@@ -244,16 +240,15 @@ if ($json->totalPosting < 7) {
                 </div>
               </div>
             </div>
-            <br/><br/>
-
           </div>
         </div>
         <!-- End of footer -->
    </div>
    <!--end pages 2-->
 
-   <div class="pages-facebook">
+   <div class="pages-facebook page-break">
    <!--header-->
+        <br/>
         <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
           <div class="col-xs-10 col-xs-offset-1">
             <div class="well tweets">
@@ -362,7 +357,6 @@ if ($json->totalPosting < 7) {
                 </div>
               </div>
             </div>
-            <br/><br/>
           </div>
         </div>
         <!-- End of content -->

@@ -40,12 +40,7 @@ $jsonIG = "instagram-billyboen.json";
       .highcharts-no-data text{
         font-size: 20px !important;
       }
-	  
       @media print {
-        .footer {
-          position: fixed;
-          bottom: 0;
-        }
         .page-break {
           page-break-after: always;
         }

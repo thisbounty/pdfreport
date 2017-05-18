@@ -35,9 +35,8 @@
 ?>
 
       <!-- Page -->
-      <div class="pages">
+      <page size="A4">
         <!-- Header -->
-        <br/>
         <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
           <div class="col-xs-10 col-xs-offset-1">
             <div class="well tweets">
@@ -186,13 +185,13 @@
           </div>
         </div>
         <!-- End of content -->
-      </div>
+      </page>
       <!-- Page -->
 
        <!-- Page -->
 
        <br/>
-      <div class="pages">
+      <page size="A4">
 
         <!-- Header -->
         <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
@@ -300,7 +299,7 @@
         <br/><br/><br/>
         <!-- End of content -->
       </div>
-	 </div>
+	 </page>
 
 
 
@@ -353,9 +352,7 @@
         Highcharts.chart('chartInfluencer-twitter',{
           chart: {
               type: 'bar',
-              height:500,
               marginRight:20,
-
           },
           title: {
                   text: ''
