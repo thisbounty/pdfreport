@@ -1,0 +1,7 @@
+@media print
+{
+  page {
+    page-break-inside:avoid;
+    page-break-after:always;
+  }
+}

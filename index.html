@@ -1,0 +1,2605 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>socialmeter.id</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script type="text/javascript" src="http://mail2yogie.localhost/script/jquery.js"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src="http://mail2yogie.localhost/script/moment.js"></script>
+    <script type="text/javascript" src="http://mail2yogie.localhost/script/wordcloud2.js"></script>
+    <script type="text/javascript" src="http://mail2yogie.localhost/script/underscore.js"></script>
+    <script type="text/javascript" src="http://mail2yogie.localhost/script/jquery.number.js"></script>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+      body, h1, h2, h3, h4, h5, h6{
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      ol li{
+        margin-bottom: 10px;
+      }
+      ol{
+        width: 900px;
+        padding-left: 15px
+      }
+      .highcharts-no-data text{
+        font-size: 20px !important;
+      }
+      @media print {
+        .page-break {
+          page-break-inside: avoid;
+          page-break-after: always;
+        }
+      }
+      path.highcharts-tracker { display:none; }
+      g.highcharts-tracker, g.highcharts-tooltip, path[isShadow] { display:none; }
+    </style>
+  </head>
+
+  <body>
+
+   <div class="pages page-break">
+       <!--header sample LOGO-SOCIALMETER-->
+
+         <div class="row-fluid">
+          <div class="col-xs-12">
+
+<br/><br/><br/><br/>
+            <img src="images/LogoSocialMeter-2.png" class="logo-genesis img-responsive" style="margin: 0 auto;" />
+             <img src="images/logo-sample.png" class="logo-media img-responsive" style="margin: 0 auto;" />
+
+
+          </div>
+        </div>
+        <!--end header sample LOGO-SOCIALMETER-->
+
+        <!--header sample-->
+          <div class="row">
+            <div class="col-xs-12">
+
+
+          </div>
+          </div>
+     <!--end-header sample-->
+
+        </div>
+      <!-- Page -->
+
+    <div class="container-fluid">
+
+    
+      <!-- Page -->
+      <page size="A4">
+        <!-- Header -->
+        <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="well tweets">
+              <div class="row">
+                <img src="images/twitter-big22.png" class="image-left"/>
+                <img src="images/twitter-big.png" class="twitter-logo image-left2"/>
+                <img src="http://pbs.twimg.com/profile_images/491160699616256002/35bx6vEY.png" class="image-right top-imgRight"/>
+                <div class="col-xs-3 head-left">
+                      <h5 class="top-writing top-title"><b>GDILAB</b></h5>
+                      <p class="top-writing top-subtitle" style="margin-top:0px;">Twitter Analysis</p>
+                </div>
+                <div class="col-xs-5">
+                  <p class="top-writing head-center">
+                    <b>Twitter User</b>: <span class="top-query">@BillyBoen</span>
+                    <br/>
+                    <b>Periode</b>: <span class="top-date">14 May - 08 May 2017</span>
+                  </p>
+                </div>
+                <div class="col-xs-2 col-xs-offset-1">
+                  <!-- <img src="../images/BBG.png" class="company-logo" style="float:right;" /> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- Copy New HEADER 1 END -->
+        <!-- End Header -->
+
+        <div style="clear:both"></div>
+
+        <!-- Content -->
+        <div class="row-fluid" style="margin-top: 50px">
+          <div class="col-xs-12">
+            <div class="row">
+              <!-- <br/>                                             -->
+              <div class="col-xs-6 col-xs-offset-1">
+                <h4 style="margin-bottom:5px;"><b>Keyword Mapping</b></h4>
+                <p class="top-writing"> Percakapan yang terjadi di media sosial tentang brand atau pilihan kata<br />yang diasosiasikan dengan brand.</b> </p>
+                <div class="row">
+                  <br/>
+                  <div class="col-xs-12 " style="margin-top: 20px">
+                    <canvas id="keywordMapping-twitter"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-5" style="padding: 0">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h4 style="margin-bottom:5px;"><b>Activity &amp; Impact</b></h4>
+                      <p class="top-writing">
+                        Informasi kuantitatif tentang kegiatan dan interaksi yang terjadi di Twitter.
+                      </p>
+                      <div class="row">
+                        <div class="col-xs-10">
+                          <div class="row activity-impact-font" style="margin-top: 2px; margin-bottom: 3px">
+                            <div class="col-xs-10 col-xs-offset-2">
+                              <i class="fa fa-twitter fa-2x padding-5"></i>
+                              <b>108.222</b>
+                              <span class="title-post" style="font-size:12px">FOLLOWERS</span>
+                              </div>
+                          </div>
+                          <div class="row activity-impact-font">
+                            <div class="col-xs-6" >
+                              <div class="row">
+                                <div class="col-xs-3">
+                                  <i class="fa fa-commenting fa-2x"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                  <h5 class="title-post">TOTAL POST</h5>
+                                  <b>479</b>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-6" style="padding-left:0px;">
+                              <div class="row">
+                                <div class="col-xs-3">
+                                  <i class="fa fa-users fa-2x padding-5"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                  <h5 class="title-post">TOTAL POTENTIAL REACH</h5>
+                                  <b>1.130.788</b>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row activity-impact-font">
+                            <div class="col-xs-6">
+                              <div class="row">
+                                <div class="col-xs-3">
+                                  <i class="fa fa-user fa-2x padding-5"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                  <h5 class="title-post">TOTAL POTENTIAL CONTRIBUTOR</h5>
+                                  <b>284</b>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-6" style="padding-left:0px;">
+                              <div class="row">
+                                <div class="col-xs-3">
+                                  <i class="fa fa-eye fa-2x padding-5"></i>
+                                </div>
+                                <div class="col-xs-9">
+                                  <h5 class="title-post">EXPOSURE</h5>
+                                  <b>2.967.440</b>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-10">
+                          <div class="row">
+                            <div class="col-xs-11">
+                              <h4 style="margin-bottom:5px; margin-top: 25px"><b>Influencers</b></h4>
+                              <p class="top-writing">Akun yang memiliki tingkat pengaruh tinggi, dengan parameter jumlah followers dan impact yang dihasilkan, serta respon dari para followers terhadap akun tersebut.</p>
+                              <div class="row">
+                                <div class="col-xs-11" style="padding: 0">
+                                  <div id="chartInfluencer-twitter" style="margin-left:0px; width:482px; height:400px;"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="col-xs-10 col-xs-offset-1 footer">
+            <div class="well tweets">
+              <div class="row">
+                <div class="col-xs-4">
+                  <p class="top-writing bottom-title" style="margin-top:0px;"><b><span style="color: #2C2D94">GDI</span> ANALYTICS</b> SocialMeter</p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-1 col-xs-offset-5 text-right">
+                  <p class="top-writing page-number" id="one" style="margin-top:0px; color: #fff;"><b>1</b></p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-2 text-center">
+                  <p class="top-writing bottom-gdilab" style="margin-top:0px;">By: GDILAB &copy; 2017</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of content -->
+      </page>
+      <!-- Page -->
+
+       <!-- Page -->
+
+       <br/>
+      <page size="A4">
+
+        <!-- Header -->
+        <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="well tweets">
+              <div class="row">
+                <img src="images/twitter-big22.png" class="image-left"/>
+                <img src="images/twitter-big.png" class="twitter-logo image-left2"/>
+                <img src="http://pbs.twimg.com/profile_images/491160699616256002/35bx6vEY.png" class="image-right top-imgRight"/>
+
+                <div class="col-xs-3 head-left">
+                      <h5 class="top-writing top-title"><b>GDILAB</b></h5>
+                      <p class="top-writing top-subtitle" style="margin-top:0px;">Twitter Analysis</p>
+                </div>
+                <div class="col-xs-5">
+                  <p class="top-writing head-center">
+                    <b>Twitter User</b>: <span class="top-query">@BillyBoen</span>
+                    <br/>
+                    <b>Periode</b>: <span class="top-date">14 May - 08 May 2017</span>
+                  </p>
+                </div>
+                <div class="col-xs-2 col-xs-offset-1">
+                  <!-- <img src="../images/BBG.png" class="company-logo" style="float:right;" /> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- Copy New HEADER 1 END -->
+        <!-- End Header -->
+
+        <div style="clear:both"></div>
+
+        <!-- Content -->
+        <div class="row-fluid" style="margin-top: 50px">
+          <div class="col-xs-12">
+            <div class="row">
+
+              <div class="col-xs-10 col-xs-offset-1">
+                <div class="row">
+                    <div class="col-xs-9">
+                      <h4 style="margin-bottom:5px;"><b>Peak Time</b></h4>
+                      <p class="top-writing">Waktu tertinggi untuk aktivitas di Twitter.</p>
+                      <div id="chartPeaktime-twitter"></div>
+                    </div>
+                </div>
+             </div>
+             <div class="col-xs-10 col-xs-offset-1">
+                <div class="row">
+                    <div class="col-xs-9">
+                    <br />
+                      <h4 style="margin-bottom:5px;"><b>Saran & Tugas Minggu ini</b></h4>
+                      <p class="top-writing">Rangkuman informasi mengenai aktivitas yang terjadi pada akun Twitter.</p>
+                      <br />
+                     <h3 style="margin-bottom:5px;">Total Posting</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+
+                      <h3 style="margin-bottom:5px;">Interaksi</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+
+
+                      <h3 style="margin-bottom:5px;">Pemilihan kata/konten</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+
+                      <h3 style="margin-bottom:5px;">Media Type</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+
+                      <h3 style="margin-bottom:5px;">Hastag Campaign</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+                    </div>
+
+                </div>
+              </div>
+              </div>
+              </div>
+
+        <!--footer-->
+
+        <div class="row-fluid">
+          <div class="col-xs-10 col-xs-offset-1 footer">
+            <div class="well tweets">
+              <div class="row">
+                <div class="col-xs-4">
+                  <p class="top-writing bottom-title" style="margin-top:0px;"><b><span style="color: #2C2D94">GDI</span> ANALYTICS</b> SocialMeter</p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-1 col-xs-offset-5 text-right">
+                  <p class="top-writing page-number" style="margin-top:0px; color: #fff;"><b class="two">2</b></p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-2 text-center">
+                  <p class="top-writing bottom-gdilab" style="margin-top:0px;">By: GDILAB &copy; 2017</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br/><br/><br/>
+        <!-- End of content -->
+      </div>
+	 </page>
+
+
+
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+
+        var keywords = [{"term":"pendidikan","count":104},{"term":"negara","count":98},{"term":"ngga","count":92},{"term":"nkri","count":71},{"term":"org","count":61},{"term":"salah","count":60},{"term":"dgn","count":49},{"term":"ahok","count":45},{"term":"waras","count":44},{"term":"cinta","count":42},{"term":"satu","count":41},{"term":"setuju","count":41},{"term":"terjadi","count":40},{"term":"maju","count":40},{"term":"sistem","count":40},{"term":"indonesia","count":39},{"term":"otak","count":39},{"term":"kebobrokan","count":38},{"term":"akar","count":38},{"term":"lbh","count":37},{"term":"tinggi","count":37},{"term":"agama","count":34},{"term":"utk","count":31},{"term":"mohon","count":30},{"term":"soal","count":30},{"term":"politik","count":29},{"term":"masalah","count":28},{"term":"kabur","count":28},{"term":"kecerdasan","count":26},{"term":"rasional","count":26},{"term":"jgn","count":26},{"term":"semoga","count":25},{"term":"masa","count":23},{"term":"menurut","count":23},{"term":"bela","count":23},{"term":"pertumbuhan","count":22},{"term":"bloon","count":22},{"term":"perlu","count":22},{"term":"skg","count":22},{"term":"dunia","count":21},{"term":"gampang","count":21},{"term":"sosmed","count":21},{"term":"bukan","count":21},{"term":"hrs","count":21},{"term":"mau","count":20},{"term":"buddha","count":20},{"term":"menjadi","count":20},{"term":"berpikir","count":20},{"term":"tingkat","count":20},{"term":"smua","count":20},{"term":"bilang","count":20},{"term":"folower","count":19},{"term":"dlm","count":19},{"term":"yot","count":19},{"term":"sih","count":19},{"term":"hari","count":18},{"term":"stupidity","count":18},{"term":"tua","count":18},{"term":"punya","count":18},{"term":"jakarta","count":18},{"term":"preventif","count":17},{"term":"anggap","count":17},{"term":"kemampuannya","count":17},{"term":"putusin","count":17},{"term":"ingatkan","count":17},{"term":"kasus","count":17},{"term":"hebat","count":17},{"term":"benar","count":17},{"term":"secara","count":17},{"term":"sekalipun","count":17},{"term":"kan","count":17},{"term":"berucap","count":17},{"term":"besar","count":16},{"term":"ktika","count":16},{"term":"ekonominya","count":16},{"term":"pertahankan","count":16},{"term":"belah","count":16},{"term":"sorotan","count":16},{"term":"terlalu","count":16},{"term":"read","count":16},{"term":"menyadar","count":16},{"term":"balik","count":16},{"term":"bgmn","count":16},{"term":"adlh","count":16},{"term":"kepecah","count":15},{"term":"tamba","count":15},{"term":"books","count":15},{"term":"pas","count":15},{"term":"penting","count":15},{"term":"segitunya","count":15},{"term":"more","count":15},{"term":"termasuk","count":15},{"term":"plain","count":15},{"term":"pembuat","count":14},{"term":"penakut","count":14},{"term":"mati","count":14},{"term":"bangsa","count":14},{"term":"nusantara","count":14},{"term":"bagus","count":14},{"term":"bumi","count":14},{"term":"takut","count":14},{"term":"aja","count":14},{"term":"bunga","count":14},{"term":"tdk","count":14},{"term":"banget","count":13},{"term":"mbak","count":13},{"term":"pak","count":13},{"term":"normal","count":13},{"term":"dia","count":12},{"term":"sampe","count":12},{"term":"gudlak","count":12},{"term":"suku","count":12},{"term":"cerdas","count":12},{"term":"ekonomi","count":12},{"term":"kelompok","count":12},{"term":"kita","count":12},{"term":"berafiliasi","count":11},{"term":"berkembang","count":11},{"term":"lsg","count":11},{"term":"dewasa","count":11},{"term":"bayi","count":11},{"term":"damai","count":11},{"term":"tukang","count":11},{"term":"gol","count":11},{"term":"berisi","count":11},{"term":"pilkada","count":11},{"term":"lantas","count":11},{"term":"partai","count":11},{"term":"sdh","count":11},{"term":"hormati","count":11},{"term":"slalu","count":10},{"term":"daftar","count":10},{"term":"wifey","count":10},{"term":"ras","count":10},{"term":"apa","count":10},{"term":"krn","count":10},{"term":"anak","count":9},{"term":"lilin","count":9},{"term":"dad","count":9},{"term":"dki","count":9},{"term":"dll","count":9},{"term":"yesus","count":9},{"term":"mas","count":9},{"term":"dpt","count":9},{"term":"baik","count":9},{"term":"mayoritas","count":9},{"term":"selamat","count":9},{"term":"bljr","count":9},{"term":"mengutip","count":9},{"term":"hmm","count":9},{"term":"sesuai","count":9},{"term":"dilakukan","count":9},{"term":"dukung","count":9},{"term":"muhammad","count":9},{"term":"atas","count":9},{"term":"nabi","count":9},{"term":"kebaikan","count":9},{"term":"kecil","count":9},{"term":"kdg","count":9},{"term":"gerakan","count":8},{"term":"berkarya","count":8},{"term":"bentrok","count":8},{"term":"manapun","count":8},{"term":"mgg","count":8},{"term":"untuk","count":8},{"term":"stiap","count":8},{"term":"seseorg","count":8},{"term":"rendahkan","count":8},{"term":"dollar","count":8},{"term":"cint","count":8},{"term":"niru","count":8},{"term":"komunitas","count":8},{"term":"ahoker","count":8},{"term":"menarik","count":7},{"term":"komen","count":7},{"term":"kendali","count":7},{"term":"gak","count":7},{"term":"muda","count":7},{"term":"belajar","count":7},{"term":"kepentingan","count":7},{"term":"paslon","count":7},{"term":"mulai","count":7},{"term":"sejarah","count":7},{"term":"tentram","count":7},{"term":"prediksi","count":7},{"term":"ternyata","count":7},{"term":"luar","count":7},{"term":"rejeki","count":7},{"term":"terlihat","count":7},{"term":"suara","count":7},{"term":"pemerintah","count":7},{"term":"thn","count":6},{"term":"retweet","count":6},{"term":"peduli","count":6},{"term":"berjuang","count":6},{"term":"pake","count":6},{"term":"asing","count":6},{"term":"pemberitaan","count":6},{"term":"kerakyatan","count":6},{"term":"berdoa","count":6}];
+
+        var influencer = [{"username":"YoungOnTop","totalTweet":6,"totalFollower":317453},{"username":"AlberthieneE","totalTweet":1,"totalFollower":511164},{"username":"BillyBoen","totalTweet":2,"totalFollower":108222},{"username":"fadlunrahman","totalTweet":28,"totalFollower":2419},{"username":"BurhanAbe","totalTweet":2,"totalFollower":14931},{"username":"RadioSmartFM","totalTweet":1,"totalFollower":15576},{"username":"_uje","totalTweet":2,"totalFollower":4404},{"username":"andiplanologi","totalTweet":2,"totalFollower":4305},{"username":"RiafmSolo","totalTweet":1,"totalFollower":8317},{"username":"inspirasioke","totalTweet":1,"totalFollower":8303},{"username":"dapitdong","totalTweet":1,"totalFollower":8302},{"username":"Dian_Supolo","totalTweet":1,"totalFollower":6232},{"username":"mpowjan","totalTweet":4,"totalFollower":1313},{"username":"nayrayn","totalTweet":4,"totalFollower":1280},{"username":"ipehalena","totalTweet":2,"totalFollower":2483},{"username":"salmanfaridi","totalTweet":1,"totalFollower":3450},{"username":"ferrykamoto","totalTweet":4,"totalFollower":859},{"username":"riyanzull","totalTweet":4,"totalFollower":852},{"username":"onlyricky","totalTweet":1,"totalFollower":2819},{"username":"dimas_nsw","totalTweet":3,"totalFollower":937},{"username":"fajarwahyu99","totalTweet":1,"totalFollower":2738},{"username":"liachristie","totalTweet":1,"totalFollower":2595},{"username":"elhami2","totalTweet":1,"totalFollower":2494},{"username":"manuremvo","totalTweet":1,"totalFollower":2410},{"username":"latifahsays","totalTweet":2,"totalFollower":1117},{"username":"raziikram","totalTweet":2,"totalFollower":1104},{"username":"almuhtadimd","totalTweet":1,"totalFollower":2039},{"username":"erhanardianda","totalTweet":2,"totalFollower":1003},{"username":"metatia_","totalTweet":1,"totalFollower":1960},{"username":"ReynolDwidi","totalTweet":4,"totalFollower":485},{"username":"enggarpradityo","totalTweet":2,"totalFollower":964},{"username":"SantoTuah","totalTweet":10,"totalFollower":191},{"username":"Noeelcr","totalTweet":3,"totalFollower":611},{"username":"sandwich_aulia","totalTweet":6,"totalFollower":274},{"username":"andreasmayp","totalTweet":3,"totalFollower":547},{"username":"benysaputra","totalTweet":1,"totalFollower":1591},{"username":"fankych","totalTweet":1,"totalFollower":1583},{"username":"imaslimboy","totalTweet":1,"totalFollower":1544},{"username":"abawonos","totalTweet":1,"totalFollower":1536},{"username":"hanindyo","totalTweet":1,"totalFollower":1534},{"username":"shellsyello","totalTweet":3,"totalFollower":489},{"username":"dvraspranamulya","totalTweet":3,"totalFollower":485},{"username":"ayusucai","totalTweet":1,"totalFollower":1453},{"username":"chrisleft","totalTweet":1,"totalFollower":1397},{"username":"sutiawanputra","totalTweet":2,"totalFollower":665},{"username":"republik_firman","totalTweet":1,"totalFollower":1328},{"username":"adityariquesa","totalTweet":1,"totalFollower":1296},{"username":"steveeen","totalTweet":3,"totalFollower":431},{"username":"mahesatams","totalTweet":3,"totalFollower":428},{"username":"andariwulan28","totalTweet":13,"totalFollower":98},{"username":"fendy_L","totalTweet":5,"totalFollower":244},{"username":"HendrikusSetya","totalTweet":3,"totalFollower":402},{"username":"fahlenstar","totalTweet":6,"totalFollower":193},{"username":"muliawan_yudi","totalTweet":4,"totalFollower":277},{"username":"Nurizal","totalTweet":2,"totalFollower":547},{"username":"GregDeJonk","totalTweet":1,"totalFollower":1041},{"username":"mumuuus","totalTweet":2,"totalFollower":517},{"username":"ErizkaTan","totalTweet":3,"totalFollower":342},{"username":"yustypurba","totalTweet":2,"totalFollower":510},{"username":"redaksi_mustafa","totalTweet":1,"totalFollower":1012},{"username":"johanadhi","totalTweet":6,"totalFollower":167},{"username":"wyulchaidir","totalTweet":2,"totalFollower":493},{"username":"radityaputra_","totalTweet":1,"totalFollower":971},{"username":"tomisaputro","totalTweet":1,"totalFollower":962},{"username":"venyus","totalTweet":1,"totalFollower":958},{"username":"mayabty","totalTweet":1,"totalFollower":913},{"username":"nichojayakusuma","totalTweet":3,"totalFollower":304},{"username":"IvySkydive","totalTweet":1,"totalFollower":897},{"username":"mtppas","totalTweet":2,"totalFollower":444},{"username":"Rusydian13","totalTweet":2,"totalFollower":423},{"username":"AryaHafiz333","totalTweet":1,"totalFollower":835},{"username":"nikenmawar","totalTweet":1,"totalFollower":832},{"username":"hitachi_izuru","totalTweet":9,"totalFollower":92},{"username":"LutfiAlzuhri","totalTweet":1,"totalFollower":796},{"username":"AstridNiki","totalTweet":1,"totalFollower":793},{"username":"EstianaKhr","totalTweet":1,"totalFollower":790},{"username":"diantybp","totalTweet":1,"totalFollower":788},{"username":"Okhe_Khatika","totalTweet":1,"totalFollower":775},{"username":"Eddyleed","totalTweet":2,"totalFollower":384},{"username":"JanuriDP","totalTweet":3,"totalFollower":255},{"username":"verena_fidelia","totalTweet":1,"totalFollower":762},{"username":"faradida","totalTweet":1,"totalFollower":754},{"username":"sartikanius","totalTweet":1,"totalFollower":746},{"username":"yolandwii","totalTweet":2,"totalFollower":360},{"username":"fajri_rchmn","totalTweet":1,"totalFollower":707},{"username":"Har_Bow","totalTweet":2,"totalFollower":344},{"username":"ardianiputri","totalTweet":1,"totalFollower":677},{"username":"debapirez","totalTweet":1,"totalFollower":665},{"username":"kurniabagus","totalTweet":1,"totalFollower":662},{"username":"jarotdwi","totalTweet":1,"totalFollower":659},{"username":"adipendet","totalTweet":2,"totalFollower":327},{"username":"triandrik","totalTweet":1,"totalFollower":651},{"username":"Ririnv","totalTweet":1,"totalFollower":649},{"username":"joysperanza","totalTweet":2,"totalFollower":324},{"username":"astriretnoo","totalTweet":3,"totalFollower":211},{"username":"fanyatamara","totalTweet":1,"totalFollower":629},{"username":"masgalang","totalTweet":1,"totalFollower":624},{"username":"afrilianaliana","totalTweet":2,"totalFollower":308},{"username":"elganabila","totalTweet":1,"totalFollower":616},{"username":"Jetcooz","totalTweet":1,"totalFollower":608}];
+
+        var relatedAccount = [{"user":{"id":55889431,"name":"BILLYBOEN.com","screenName":"BillyBoen","text":"BillyBoen"},"count":484},{"user":{"id":108038273,"name":"YOUNGONTOP.com","screenName":"YoungOnTop","text":"YoungOnTop"},"count":11},{"user":{"id":272722956,"name":"\u00f0\u009f\u0087\u00af \u00f0\u009f\u0087\u00b4 \u00f0\u009f\u0087\u00ad \u00f0\u009f\u0087\u00a6 \u00f0\u009f\u0087\u00b3","screenName":"johanadhi","text":"johanadhi"},"count":5},{"user":{"id":53984542,"name":"Alamanda Shantika","screenName":"alamandas","text":"alamandas"},"count":3},{"user":{"id":17128975,"name":"CNN Indonesia","screenName":"CNNIndonesia","text":"CNNIndonesia"},"count":2},{"user":{"id":57881656,"name":"agus ariawan","screenName":"aariawan_","text":"aariawan_"},"count":2},{"user":{"id":74372696,"name":"Mutiara Pasaribu","screenName":"mtppas","text":"mtppas"},"count":2},{"user":{"id":177084452,"name":"IG: @radiosmartfm959","screenName":"RadioSmartFM","text":"RadioSmartFM"},"count":2},{"user":{"id":48680229,"name":"inayah wahid","screenName":"naywahid","text":"naywahid"},"count":1},{"user":{"id":862937303575961600,"name":"Devita Nanda","screenName":"DevitaNanda","text":"DevitaNanda"},"count":1},{"user":{"id":1013400762,"name":"Baret Biru","screenName":"wyulchaidir","text":"wyulchaidir"},"count":1},{"user":{"id":91503960,"name":"Susan Boen","screenName":"SueBoen","text":"SueBoen"},"count":1},{"user":{"id":20562637,"name":"Business Insider","screenName":"businessinsider","text":"businessinsider"},"count":1},{"user":{"id":482581138,"name":"Amanah Hudayana","screenName":"amanah_hdy","text":"amanah_hdy"},"count":1},{"user":{"id":108375032,"name":"Alissa Wahid","screenName":"AlissaWahid","text":"AlissaWahid"},"count":1},{"user":{"id":889057760,"name":"kang asep","screenName":"asepssories","text":"asepssories"},"count":1},{"user":{"id":89418832,"name":"Yunarto Wijaya","screenName":"yunartowijaya","text":"yunartowijaya"},"count":1},{"user":{"id":717248468763303936,"name":"buatkontrak.com","screenName":"buatkontrak","text":"buatkontrak"},"count":1},{"user":{"id":120329799,"name":"Erlita Sari","screenName":"erlitasr","text":"erlitasr"},"count":1},{"user":{"id":990363799,"name":"Young On Top Jogja","screenName":"YOT_Yogyakarta","text":"YOT_Yogyakarta"},"count":1}];
+
+        var responded = [];
+
+        var peakTimes = [{"day":"2017-05-08","counts":[{"time":"0","count":0},{"time":"1","count":0},{"time":"2","count":0},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":0},{"time":"6","count":0},{"time":"7","count":0},{"time":"8","count":0},{"time":"9","count":0},{"time":"10","count":0},{"time":"11","count":0},{"time":"12","count":0},{"time":"13","count":0},{"time":"14","count":0},{"time":"15","count":0},{"time":"16","count":0},{"time":"17","count":3},{"time":"18","count":0},{"time":"19","count":3},{"time":"20","count":0},{"time":"21","count":0},{"time":"22","count":0},{"time":"23","count":0}],"count":6,"peakTime":{"time":"17","count":3}},{"day":"2017-05-09","counts":[{"time":"0","count":0},{"time":"1","count":0},{"time":"2","count":0},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":0},{"time":"6","count":0},{"time":"7","count":2},{"time":"8","count":0},{"time":"9","count":2},{"time":"10","count":1},{"time":"11","count":47},{"time":"12","count":6},{"time":"13","count":8},{"time":"14","count":7},{"time":"15","count":0},{"time":"16","count":2},{"time":"17","count":37},{"time":"18","count":29},{"time":"19","count":19},{"time":"20","count":8},{"time":"21","count":4},{"time":"22","count":3},{"time":"23","count":29}],"count":204,"peakTime":{"time":"11","count":47}},{"day":"2017-05-10","counts":[{"time":"0","count":0},{"time":"1","count":3},{"time":"2","count":1},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":3},{"time":"6","count":0},{"time":"7","count":3},{"time":"8","count":1},{"time":"9","count":6},{"time":"10","count":2},{"time":"11","count":1},{"time":"12","count":0},{"time":"13","count":2},{"time":"14","count":2},{"time":"15","count":1},{"time":"16","count":0},{"time":"17","count":3},{"time":"18","count":1},{"time":"19","count":5},{"time":"20","count":6},{"time":"21","count":1},{"time":"22","count":13},{"time":"23","count":12}],"count":66,"peakTime":{"time":"22","count":13}},{"day":"2017-05-11","counts":[{"time":"0","count":4},{"time":"1","count":2},{"time":"2","count":0},{"time":"3","count":2},{"time":"4","count":1},{"time":"5","count":0},{"time":"6","count":5},{"time":"7","count":13},{"time":"8","count":21},{"time":"9","count":15},{"time":"10","count":7},{"time":"11","count":18},{"time":"12","count":2},{"time":"13","count":1},{"time":"14","count":4},{"time":"15","count":3},{"time":"16","count":0},{"time":"17","count":2},{"time":"18","count":9},{"time":"19","count":1},{"time":"20","count":1},{"time":"21","count":2},{"time":"22","count":4},{"time":"23","count":1}],"count":118,"peakTime":{"time":"8","count":21}},{"day":"2017-05-12","counts":[{"time":"0","count":0},{"time":"1","count":0},{"time":"2","count":2},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":0},{"time":"6","count":1},{"time":"7","count":1},{"time":"8","count":15},{"time":"9","count":3},{"time":"10","count":2},{"time":"11","count":1},{"time":"12","count":3},{"time":"13","count":1},{"time":"14","count":0},{"time":"15","count":0},{"time":"16","count":5},{"time":"17","count":1},{"time":"18","count":5},{"time":"19","count":2},{"time":"20","count":2},{"time":"21","count":1},{"time":"22","count":0},{"time":"23","count":1}],"count":46,"peakTime":{"time":"8","count":15}},{"day":"2017-05-13","counts":[{"time":"0","count":1},{"time":"1","count":0},{"time":"2","count":0},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":2},{"time":"6","count":3},{"time":"7","count":0},{"time":"8","count":0},{"time":"9","count":2},{"time":"10","count":3},{"time":"11","count":2},{"time":"12","count":0},{"time":"13","count":0},{"time":"14","count":3},{"time":"15","count":4},{"time":"16","count":1},{"time":"17","count":2},{"time":"18","count":3},{"time":"19","count":0},{"time":"20","count":0},{"time":"21","count":7},{"time":"22","count":0},{"time":"23","count":1}],"count":34,"peakTime":{"time":"21","count":7}},{"day":"2017-05-14","counts":[{"time":"0","count":1},{"time":"1","count":0},{"time":"2","count":0},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":0},{"time":"6","count":1},{"time":"7","count":0},{"time":"8","count":0},{"time":"9","count":0},{"time":"10","count":0},{"time":"11","count":0},{"time":"12","count":0},{"time":"13","count":0},{"time":"14","count":0},{"time":"15","count":0},{"time":"16","count":0},{"time":"17","count":1},{"time":"18","count":0},{"time":"19","count":1},{"time":"20","count":0},{"time":"21","count":1},{"time":"22","count":0},{"time":"23","count":0}],"count":5,"peakTime":{"time":"0","count":1}}];
+
+        // Keyword Mapping
+        keywordMapping('#keywordMapping-twitter', keywords);
+
+        // activity impact chart
+        var basicInfo = {
+          "totalPosting": 479 ,
+          "totalOriginalPosting":8,
+          "totalRetweetPosting":392,
+          "totalReplyPosting":79,
+          "totalFavoritePosting":0
+        };
+
+        colors = ['#5B749A', '#56B2DE', '#D0D0D0', '#BA1640', '#D66C61', '#28C9B7', '#9E8A03', '#FCD049', '#EB4418', '#F15E68'];
+
+        // Influencer
+        var influencerLabel = [];
+        var influencerData = [];
+        var influencerFollower = [];
+        var i = 0;
+        var dataSum = 0;
+
+        _.each(influencer, function(item){
+            if(i < 10){
+              influencerLabel.push('@'+item.username);
+              influencerData.push({"y":item.totalFollower * item.totalTweet, "color":colors[i]});
+              influencerFollower.push(item.totalFollower);
+              dataSum += (item.totalFollower * item.totalTweet);
+            }
+            i++;
+        });
+
+
+        Highcharts.chart('chartInfluencer-twitter',{
+          chart: {
+              type: 'bar',
+              marginRight:20,
+          },
+          title: {
+                  text: ''
+          },
+          xAxis: {
+            gridLineWidth: 0,
+            categories: influencerLabel,
+            labels: {
+                formatter: function() {
+                    return '<b>'+this.value+'</b><br/>'+Highcharts.numberFormat(influencerFollower[influencerLabel.indexOf(this.value)], 0)+' Followers';
+                },
+                padding:3
+            },
+            lineWidth:0,
+            maxPadding:0.02,
+          },
+          yAxis : {
+            gridLineWidth: 0,
+            labels : {
+              enabled : false
+            },
+            title : {
+              text : ''
+            },
+            maxPadding:0.05,
+            type: 'logarithmic',
+          },
+          tooltip: {
+              valueSuffix: ' millions'
+          },
+          colors : colors,
+          plotOptions: {
+            bar: {
+                labels: {
+                    enabled: false
+                }
+            },
+            series: {
+                colorByPoint:false,
+                dataLabels: {
+                    crop: false,
+
+                    enabled: true,
+                    overflow: 'none',
+                    y:-3,
+                    color: '#000',
+                    formatter : function() {
+                      var pcnt = (this.y / dataSum) * 100;
+                      return ' <b>'+Highcharts.numberFormat(pcnt,1)+'</b>%';
+                    }
+                },
+                pointWidth: 10,
+                enableMouseTracking: false,
+                shadow: false,
+                animation: false
+            }
+          },
+          legend: {
+              enabled : false
+          },
+          credits:{
+              enabled:false
+          },
+          tooltip: {
+              formatter: function () {
+                  return '<b>' + this.series.name + '</b><br/>' +
+                      this.x + ': ' + Highcharts.numberFormat(this.y, 0);
+              }
+          },
+          series: [{
+              name: 'Number of Impression',
+              data: influencerData,
+          }],
+          exporting: {
+            enabled: false
+          }
+        });
+
+
+        //Peaktime
+        hourData = [];
+        dayData = [];
+        peakHourData = [];
+        peakResponseData = [];
+        ticks = [];
+
+        _.each(peakTimes, function(item){
+            hourData.push([moment(item.day+" "+item.peakTime.time+":00").utc().valueOf(), item.peakTime.count]);
+            peakHourData.push(item.peakTime.time+":00");
+            peakResponseData.push(moment(item.day+" "+item.peakTime.time+":00").format('DD-MM-YYYY'));
+            dayData.push([moment(item.day+" "+"00:00").utc().valueOf(), item.count]);
+            ticks.push(moment(item.day+" "+"00:00").utc().valueOf());
+        });
+
+        hourData.sort();
+        dayData.sort();
+
+        var xIndex = 0;
+
+        Highcharts.chart('chartPeaktime-twitter',{
+            chart: {
+                backgroundColor: 'transparent',
+                //maxWidth:1100,
+                width: 890, //fani
+                height:300,
+                marginTop:20,
+                events: {
+                    load: function(){
+                        this.myTooltip = new Highcharts.Tooltip(this, this.options.tooltip);
+                    }
+                }
+            },
+            title: {
+                text: ''
+            },
+            credits: {
+                enabled: false
+            },
+
+            xAxis: {
+                gridLineWidth: 1,
+                // gridLineDashStyle: 'longdash',
+                type: 'datetime',
+                startOnTick: true,
+                //tickInterval: 24 * 3600 * 1000,
+                // minRange: 7, // one hour,
+                labels : {
+                  formatter : function() {
+                      return '<span style="font-size:13px;">'+moment(this.value).format('ddd')+'</span>';
+                  }
+                },
+                tickPositions: ticks,
+                // tickPixelInterval : 20
+            },
+            yAxis: {
+                gridLineWidth: 0,
+                title: {
+                    text: ''
+                },
+                min : 0,
+                labels : {
+                  enabled : false
+                }
+            },
+            legend: {
+                verticalAlign: 'top',
+                y: -18,
+                align : 'right',
+                floating: true,
+                borderWidth: 0
+            },
+            tooltip: {
+                enabled : false,
+                formatter: function() {
+                    return 'Total Post <b>' + $.number(this.y) + '</b> <br/>in <b>' + moment(this.x).format('MMM ddd DD, YYYY HH:mm')+ '</b>, <br/>of '+ this.series.name;
+                }
+            },
+            plotOptions: {
+              series: {
+                pointPadding: 20,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    color: '#3F51B5',
+                    //format: '<b style="font-size:12px; font-weight:bold;">{point.y:,.0f}</b>',
+                    y:-6,
+                    formatter : function() {
+                      if(this.y > 0){
+                        return '<b>' + $.number(this.y) + '</b> Post, <br/><b>' + moment(this.x).format('HH:mm')+ '</b>';
+                      }else{
+                        return '';
+                      }
+                    }
+                },
+                events: {
+                    click: function(evt) {
+                        this.chart.myTooltip.refresh(evt.point, evt);
+                    }
+                },
+
+              },
+              line : {
+                marker: {
+                    fillColor: '#FFFFFF',
+                    lineWidth: 2,
+                    lineColor: null
+                },
+                states: {
+                    hover: {
+                        lineWidth: 3
+                    }
+                },
+
+              }
+            },
+
+            series: [{
+                type: 'line',
+                color:'#3F51B5',
+                name: 'Post by Hour',
+                data: hourData,
+            },{
+                type: 'line',
+                dataLabels: {
+                  enabled: true,
+                  color: '#53585F',
+                  formatter : function() {
+                    return '<b>' + $.number(this.y) + '</b> Post, <br/><b>' + moment(this.x).format('MMM DD')+ '</b>';
+                  }
+                },
+                color: '#90ee7e',
+                name: 'Post by Day',
+                data: dayData,
+            }],
+            exporting: {
+              enabled: false
+            }
+        });
+
+
+        Highcharts.setOptions({
+          global: {
+                  timezoneOffset: -7 * 60
+          }
+        });
+
+    });
+    </script>
+
+   <!--pages 1 -->
+   <div class="pages-facebook page-break">
+  <!--header-->
+        <br/>
+        <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="well tweets">
+              <div class="row">
+                <img src="images/header.png" class="image-left"/>
+                <img src="images/FB.png" class="fb-logo image-left2-fb"/>
+                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/c0.0.50.50/p50x50/45583_522414067800506_476560648_n.png?oh=4a4117e38e19d74f30103754df1aaa7d&oe=59B74A8C" class="image-right-fb top-imgRight"/>
+
+                <div class="col-xs-3 head-left">
+                      <h5 class="top-writing top-title"><b>GDILAB</b></h5>
+                      <p class="top-writing top-subtitle" style="margin-top:0px;">Facebook Analysis</p>
+                </div>
+                <div class="col-xs-5">
+                  <p class="top-writing head-center">
+                    <b>Facebook Page </b>: <span class="top-query">Billy Boen</span>
+                    <br/>
+                    <b>Periode</b>: <span class="top-date">08 May - 15 May 2017</span>
+                  </p>
+                </div>
+                <div class="col-xs-2 col-xs-offset-1">
+                  <!-- <img src="../images/BBG.png" class="company-logo" style="float:right;" /> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- Copy New HEADER 1 END -->
+        <!-- End Header -->
+        <div style="clear:both"></div>
+
+         <!--content-->
+        <div class="row-fluid" style="margin-top: 50px">
+          <div class="col-xs-12">
+            <div class="row">
+
+              <div class="col-xs-5 col-xs-offset-1">
+                <h4 style="margin-bottom:5px;"><b>Keyword Mapping</b></h4>
+                <p class="top-writing">
+                  Percakapan yang terjadi di media sosial tentang brand atau pilihan kata<br />yang diasosiasikan dengan brand.
+                </p>
+                <br/>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <canvas id="keywordMapping-fb"></canvas>
+                     <br/><br/><br/><br/>
+                      <br/><br/><br/><br/>
+                       <br/><br/><br/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xs-5 col-xs-offset-1">
+                  <div class="row">
+                    <div class="col-xs-12" style="padding: 0">
+                      <div class="row" style="margin-top:5px;">
+                        <div class="col-xs-10">
+                          <div class="row">
+                            <div class="col-xs-11">
+                              <h4 style="margin-bottom:5px;"><b>Basic Info</b></h4>
+                              <p class="top-writing">Informasi kuantitatif tentang jumlah likes di fan page Facebook dan jumlah orang yang membicarakan tentang brand.</p>
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-10" style="padding: 0; margin-top: 25px">
+                          <div class="row activity-impact-font">
+                            <div class="col-xs-5 text-center" style="padding: 0">
+                              <i class="fa fa-heart fa-3x" style="color:#f15c80;"></i>
+                            </div>
+                            <div class="col-xs-5 text-center" style="padding: 0">
+                              <i class="fa fa-bullhorn fa-3x"></i>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-5 text-center" style="padding: 0">
+                              <h4><b>98.754</b></h4>
+                              <p class="activity-impact-font"><b>Fan Page Likes</b></p>
+                            </div>
+                            <div class="col-xs-5 text-center" style="padding: 0">
+                              <h4><b>261</b></h4>
+                              <p class="activity-impact-font" style="line-height: 14px"><b>People</b><br/><b>Talking About This</b></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row" style="margin-top:40px;">
+                        <div class="col-xs-10">
+                          <div class="row">
+                            <div class="col-xs-11">
+                              <h4 style="margin-bottom:5px;"><b>Activity &amp; Impact</b></h4>
+                              <p class="top-writing">Informasi kuantitatif tentang kegiatan dan interaksi yang terjadi di Facebook.</p>
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-10">
+                          <div class="row activity-impact-font">
+                            <div class="col-xs-6 margin-section" >
+                              <div class="row">
+                                <div class="col-xs-3">
+                                  <i class="fa fa-facebook fa-2x padding-5"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                  <h5 class="title-post">TOTAL POST</h5>
+                                  <b>153</b>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-6 margin-section" style="padding-left:0px;">
+                              <div class="row">
+                                <div class="col-xs-3">
+                                  <i class="fa fa-user fa-2x padding-5"></i>
+                                </div>
+                                <div class="col-xs-9">
+                                  <h5 class="title-post">CONTRIBUTOR</h5>
+                                  <b>163</b>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row activity-impact-font">
+                            <div class="col-xs-6 margin-section" >
+                              <div class="row">
+                                <div class="col-xs-3">
+                                  <i class="fa fa-thumbs-up fa-2x padding-5"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                  <h5 class="title-post">POST LIKES</h5>
+                                  <b>444</b>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-6 margin-section" style="padding-left:0px;">
+                              <div class="row">
+                                <div class="col-xs-3">
+                                  <i class="fa fa-users fa-2x padding-5"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                  <h5 class="title-post">TOTAL POTENTIAL REACH</h5>
+                                  <b>98.754</b>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row activity-impact-font">
+                            <div class="col-xs-6 margin-section" >
+                              <div class="row">
+                                <div class="col-xs-3">
+                                  <i class="fa fa-comments fa-2x padding-5"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                  <h5 class="title-post">TOTAL COMMENT</h5>
+                                  <b>19</b>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-6 margin-section" style="padding-left:0px;">
+                              <div class="row">
+                                <div class="col-xs-3">
+                                  <i class="fa fa-eye fa-2x padding-5"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                  <h5 class="title-post">TOTAL POTENTIAL EXPOSURE</h5>
+                                  <b>15.109.362</b>
+                                </div>
+                                 <br/><br/><br/><br/>
+                              </div>
+                            </div>
+                             <br/><br/><br/><br/>
+                          </div>
+                        </div>
+                      </div>
+                       <br/><br/><br/><br/>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <br/><br/><br/><br/><br/><br/>
+
+          <!--end content-->
+
+
+         <!--footer-->
+        <div class="row-fluid">
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          <div class="col-xs-10 col-xs-offset-1 footer">
+            <div class="well tweets">
+              <div class="row">
+                <div class="col-xs-4">
+                  <p class="top-writing bottom-title" style="margin-top:0px;"><b><span style="color: #2C2D94">GDI</span> ANALYTICS</b> SocialMeter</p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-1 col-xs-offset-5 text-right">
+                  <p class="top-writing page-number" style="margin-top:0px; color: #fff;"><b class="two">2</b></p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-2 text-center">
+                  <p class="top-writing bottom-gdilab" style="margin-top:0px;">By: GDILAB &copy; 2017</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of footer -->
+   </div>
+   <!--end pages 2-->
+
+   <div class="pages-facebook page-break">
+   <!--header-->
+        <br/>
+        <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="well tweets">
+              <div class="row">
+                <img src="images/twitter-big22.png" class="image-left"/>
+                <img src="images/Facebook_logo.png" class="fb-logo image-left2-fb"/>
+                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/c0.0.50.50/p50x50/45583_522414067800506_476560648_n.png?oh=4a4117e38e19d74f30103754df1aaa7d&oe=59B74A8C" class="image-right-fb top-imgRight"/>
+
+                <div class="col-xs-3 head-left">
+                      <h5 class="top-writing top-title"><b>GDILAB</b></h5>
+                      <p class="top-writing top-subtitle" style="margin-top:0px;">Facebook Analysis</p>
+                </div>
+                <div class="col-xs-5">
+                  <p class="top-writing head-center">
+                    <b>Facebook Page</b>: <span class="top-query">Billy Boen</span>
+                    <br/>
+                    <b>Periode</b>: <span class="top-date">08 May - 15 May 2017</span>
+                  </p>
+                </div>
+                <div class="col-xs-2 col-xs-offset-1">
+                  <!-- <img src="../images/BBG.png" class="company-logo" style="float:right;" /> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- Copy New HEADER 1 END -->
+        <!-- End Header -->
+
+
+        <div style="clear:both"></div>
+
+        <!-- Content -->
+        <div class="row-fluid" style="margin-top:50px">
+          <div class="col-xs-12">
+            <div class="row">
+                           <!--content peak time-->
+              <div class="col-xs-10 col-xs-offset-1">
+                <div class="row">
+                    <div class="col-xs-9">
+                      <h4 style="margin-bottom: 5px"><b>Peak Time</b></h4>
+                      <p class="top-writing">
+                      Waktu tertinggi untuk aktivitas di Facebook.
+                      </p>
+                      <div id="chartPeaktime-fb"></div>
+                    </div>
+                </div>
+              </div>
+              <!-- end content peak time -->
+
+               <!--content executive summary-->
+                <div class="col-xs-10 col-xs-offset-1">
+                  <div class="row">
+                    <div class="col-xs-9">
+
+                      <h4 style="margin-bottom:5px;">Saran & Tugas Minggu ini</h4>
+                      <p class="top-writing">Rangkuman informasi mengenai aktivitas yang terjadi pada akun Twitter.</p>
+                      <br />
+                      <h3 style="margin-bottom:5px;">Total Posting</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+
+                      <h3 style="margin-bottom:5px;">Interaksi</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+
+                      <h3 style="margin-bottom:5px;">Pemilihan kata/konten</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+
+                      <h3 style="margin-bottom:5px;">Media Type</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+
+                      <h3 style="margin-bottom:5px;">Hastag Campaign</h3>
+                      <ol>
+                       <li>will be filled by text, max 255 characters here</li>
+                      </ol>
+
+                    </div>
+                  </div>
+                </div>
+                <!--end content executive summary-->
+
+            </div>
+          </div>
+        </div>
+        <!--end content-->
+
+      <!--footer-->
+        <div class="row-fluid">
+          <div class="col-xs-10 col-xs-offset-1 footer">
+            <div class="well tweets">
+              <div class="row">
+                <div class="col-xs-4">
+                  <p class="top-writing bottom-title" style="margin-top:0px;"><b><span style="color: #2C2D94">GDI</span> ANALYTICS</b> SocialMeter</p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-1 col-xs-offset-5 text-right">
+                  <p class="top-writing page-number" style="margin-top:0px; color: #fff;"><b class="two">2</b></p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-2 text-center">
+                  <p class="top-writing bottom-gdilab" style="margin-top:0px;">By: GDILAB &copy; 2017</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of content -->
+   </div>
+
+
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        var keywords = [{"term":"ngga","count":23},{"term":"utk","count":19},{"term":"org","count":14},{"term":"dgn","count":13},{"term":"negara","count":11},{"term":"skg","count":11},{"term":"indonesia","count":10},{"term":"nkri","count":9},{"term":"yot","count":9},{"term":"perlu","count":9},{"term":"hari","count":8},{"term":"daftar","count":8},{"term":"hmm","count":8},{"term":"jadi","count":7},{"term":"cinta","count":7},{"term":"aja","count":7},{"term":"nih","count":7},{"term":"anak","count":6},{"term":"pendidikan","count":6},{"term":"hrs","count":6},{"term":"otak","count":6},{"term":"baik","count":6},{"term":"agama","count":6},{"term":"sosmed","count":6},{"term":"ahok","count":6},{"term":"cerdas","count":6},{"term":"jakarta","count":5},{"term":"berkarya","count":5},{"term":"top","count":5},{"term":"menarik","count":5},{"term":"soal","count":5},{"term":"naikin","count":5},{"term":"punya","count":5},{"term":"baru","count":5},{"term":"love","count":5},{"term":"buddha","count":5},{"term":"bangsa","count":5},{"term":"sdh","count":5},{"term":"bisnis","count":5},{"term":"salah","count":5},{"term":"smua","count":5},{"term":"setuju","count":5},{"term":"waisak","count":4},{"term":"muda","count":4},{"term":"rsvp","count":4},{"term":"done","count":4},{"term":"yogya","count":4},{"term":"sblm","count":4},{"term":"baca","count":4},{"term":"wifey","count":4},{"term":"mei","count":4},{"term":"slalu","count":4},{"term":"politik","count":4},{"term":"rasional","count":4},{"term":"ini","count":4},{"term":"mbak","count":4},{"term":"sampe","count":4},{"term":"selamat","count":4},{"term":"ato","count":4},{"term":"gudlak","count":4},{"term":"jgn","count":4},{"term":"now","count":4},{"term":"penawaran","count":4},{"term":"suku","count":4},{"term":"waras","count":4},{"term":"dear","count":4},{"term":"endingnya","count":4},{"term":"mohon","count":4},{"term":"normal","count":4},{"term":"pinter","count":4},{"term":"krn","count":4},{"term":"nget","count":3},{"term":"gerakan","count":3},{"term":"ekonomi","count":3},{"term":"pancasila","count":3},{"term":"satu","count":3},{"term":"lbh","count":3},{"term":"saya","count":3},{"term":"pilkada","count":3},{"term":"mudah","count":3},{"term":"pake","count":3},{"term":"penjualan","count":3},{"term":"dah","count":3},{"term":"day","count":3},{"term":"paslon","count":3},{"term":"deh","count":3},{"term":"terjadi","count":3},{"term":"dki","count":3},{"term":"butuh","count":3},{"term":"sesuai","count":3},{"term":"dpt","count":3},{"term":"friends","count":3},{"term":"maju","count":3},{"term":"mgg","count":3},{"term":"pembicara","count":3},{"term":"mayoritas","count":3},{"term":"semoga","count":3},{"term":"masa","count":3},{"term":"stiap","count":3},{"term":"msh","count":3}];
+
+        var peakTimes = [{"day":"2017-05-08","counts":[{"time":"0","count":0},{"time":"1","count":0},{"time":"2","count":0},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":0},{"time":"6","count":1},{"time":"7","count":0},{"time":"8","count":1},{"time":"9","count":1},{"time":"10","count":1},{"time":"11","count":0},{"time":"12","count":0},{"time":"13","count":0},{"time":"14","count":0},{"time":"15","count":2},{"time":"16","count":0},{"time":"17","count":5},{"time":"18","count":0},{"time":"19","count":4},{"time":"20","count":1},{"time":"21","count":0},{"time":"22","count":0},{"time":"23","count":0}],"count":16,"peakTime":{"time":"17","count":5}},{"day":"2017-05-09","counts":[{"time":"0","count":0},{"time":"1","count":0},{"time":"2","count":0},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":0},{"time":"6","count":0},{"time":"7","count":0},{"time":"8","count":3},{"time":"9","count":3},{"time":"10","count":2},{"time":"11","count":9},{"time":"12","count":2},{"time":"13","count":1},{"time":"14","count":0},{"time":"15","count":0},{"time":"16","count":2},{"time":"17","count":16},{"time":"18","count":3},{"time":"19","count":1},{"time":"20","count":0},{"time":"21","count":1},{"time":"22","count":0},{"time":"23","count":0}],"count":43,"peakTime":{"time":"17","count":16}},{"day":"2017-05-10","counts":[{"time":"0","count":2},{"time":"1","count":0},{"time":"2","count":0},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":0},{"time":"6","count":0},{"time":"7","count":1},{"time":"8","count":2},{"time":"9","count":0},{"time":"10","count":1},{"time":"11","count":0},{"time":"12","count":0},{"time":"13","count":0},{"time":"14","count":3},{"time":"15","count":0},{"time":"16","count":0},{"time":"17","count":0},{"time":"18","count":1},{"time":"19","count":1},{"time":"20","count":0},{"time":"21","count":0},{"time":"22","count":6},{"time":"23","count":0}],"count":17,"peakTime":{"time":"22","count":6}},{"day":"2017-05-11","counts":[{"time":"0","count":0},{"time":"1","count":0},{"time":"2","count":0},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":0},{"time":"6","count":7},{"time":"7","count":13},{"time":"8","count":6},{"time":"9","count":1},{"time":"10","count":3},{"time":"11","count":6},{"time":"12","count":0},{"time":"13","count":0},{"time":"14","count":2},{"time":"15","count":0},{"time":"16","count":0},{"time":"17","count":2},{"time":"18","count":3},{"time":"19","count":2},{"time":"20","count":0},{"time":"21","count":0},{"time":"22","count":1},{"time":"23","count":0}],"count":46,"peakTime":{"time":"7","count":13}},{"day":"2017-05-12","counts":[{"time":"0","count":0},{"time":"1","count":0},{"time":"2","count":0},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":0},{"time":"6","count":0},{"time":"7","count":0},{"time":"8","count":6},{"time":"9","count":2},{"time":"10","count":0},{"time":"11","count":0},{"time":"12","count":1},{"time":"13","count":0},{"time":"14","count":0},{"time":"15","count":0},{"time":"16","count":5},{"time":"17","count":0},{"time":"18","count":3},{"time":"19","count":0},{"time":"20","count":2},{"time":"21","count":7},{"time":"22","count":1},{"time":"23","count":0}],"count":27,"peakTime":{"time":"21","count":7}},{"day":"2017-05-13","counts":[{"time":"0","count":0},{"time":"1","count":0},{"time":"2","count":0},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":0},{"time":"6","count":0},{"time":"7","count":0},{"time":"8","count":2},{"time":"9","count":1},{"time":"10","count":3},{"time":"11","count":0},{"time":"12","count":1},{"time":"13","count":2},{"time":"14","count":2},{"time":"15","count":4},{"time":"16","count":0},{"time":"17","count":1},{"time":"18","count":0},{"time":"19","count":0},{"time":"20","count":2},{"time":"21","count":2},{"time":"22","count":0},{"time":"23","count":2}],"count":22,"peakTime":{"time":"15","count":4}},{"day":"2017-05-14","counts":[{"time":"0","count":0},{"time":"1","count":0},{"time":"2","count":0},{"time":"3","count":0},{"time":"4","count":0},{"time":"5","count":0},{"time":"6","count":0},{"time":"7","count":0},{"time":"8","count":0},{"time":"9","count":0},{"time":"10","count":0},{"time":"11","count":0},{"time":"12","count":0},{"time":"13","count":0},{"time":"14","count":0},{"time":"15","count":0},{"time":"16","count":1},{"time":"17","count":0},{"time":"18","count":0},{"time":"19","count":0},{"time":"20","count":0},{"time":"21","count":0},{"time":"22","count":0},{"time":"23","count":0}],"count":1,"peakTime":{"time":"16","count":1}}];
+
+        colors = ['#5B749A', '#56B2DE', '#D0D0D0', '#BA1640', '#D66C61', '#28C9B7', '#9E8A03', '#FCD049', '#EB4418', '#F15E68'];
+
+        // Keyword Mapping
+        keywordMapping('#keywordMapping-fb', keywords);
+
+        // activity impact chart
+        var basicInfo = {
+            "totalPosting":153 ,
+            "totalComment":19 ,
+            "totalLike":444 ,
+            "Reach":98754 ,
+            "Exposure":15109362 ,
+            "totalContributor":163        };
+
+        var activity_label = ['Total Posts', 'Total Comment', 'Total Posts Likes', 'Reach', 'Exposure', 'Total Contributor'];
+        var activity_data = [ basicInfo.totalPosting, basicInfo.totalComment, basicInfo.totalLike, basicInfo.Reach, basicInfo.Exposure, basicInfo.totalContributor];
+
+        //Peaktime
+        hourData = [];
+        dayData = [];
+        peakHourData = [];
+        peakResponseData = [];
+        ticks = [];
+
+        _.each(peakTimes, function(item){
+            hourData.push([moment(item.day+" "+item.peakTime.time+":00").utc().valueOf(), item.peakTime.count]);
+            peakHourData.push(item.peakTime.time+":00");
+            peakResponseData.push(moment(item.day+" "+item.peakTime.time+":00").format('DD-MM-YYYY'));
+            dayData.push([moment(item.day+" "+"00:00").utc().valueOf(), item.count]);
+            ticks.push(moment(item.day+" "+"00:00").utc().valueOf());
+        });
+
+        hourData.sort();
+        dayData.sort();
+
+        var xIndex = 0;
+
+        Highcharts.chart('chartPeaktime-fb',{
+            chart: {
+                backgroundColor: 'transparent',
+                //maxWidth:1100,
+                width: 890, //fani
+                height:300,
+                marginTop:20,
+                events: {
+                    load: function(){
+                        this.myTooltip = new Highcharts.Tooltip(this, this.options.tooltip);
+                    }
+                }
+            },
+            title: {
+                text: ''
+            },
+            credits: {
+                enabled: false
+            },
+
+            xAxis: {
+                gridLineWidth: 1,
+                // gridLineDashStyle: 'longdash',
+                type: 'datetime',
+                startOnTick: true,
+                //tickInterval: 24 * 3600 * 1000,
+                // minRange: 7, // one hour,
+                labels : {
+                  formatter : function() {
+                      return '<span style="font-size:13px;">'+moment(this.value).format('ddd')+'</span>';
+                  }
+                },
+                tickPositions: ticks,
+                // tickPixelInterval : 20
+            },
+            yAxis: {
+                gridLineWidth: 0,
+                title: {
+                    text: ''
+                },
+                min : 0,
+                labels : {
+                  enabled : false
+                }
+            },
+            legend: {
+                verticalAlign: 'top',
+                y: -18,
+                align : 'right',
+                floating: true,
+                borderWidth: 0
+            },
+            tooltip: {
+                enabled : false,
+                formatter: function() {
+                    return 'Total Post <b>' + $.number(this.y) + '</b> <br/>in <b>' + moment(this.x).format('MMM ddd DD, YYYY HH:mm')+ '</b>, <br/>of '+ this.series.name;
+                }
+            },
+            plotOptions: {
+              series: {
+                pointPadding: 20,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    color: '#3F51B5',
+                    //format: '<b style="font-size:12px; font-weight:bold;">{point.y:,.0f}</b>',
+                    y:-6,
+                    formatter : function() {
+                      if(this.y > 0){
+                        return '<b>' + $.number(this.y) + '</b> Post, <br/><b>' + moment(this.x).format('HH:mm')+ '</b>';
+                      }else{
+                        return '';
+                      }
+                    }
+                },
+                events: {
+                    click: function(evt) {
+                        this.chart.myTooltip.refresh(evt.point, evt);
+                    }
+                },
+
+              },
+              line : {
+                marker: {
+                    fillColor: '#FFFFFF',
+                    lineWidth: 2,
+                    lineColor: null
+                },
+                states: {
+                    hover: {
+                        lineWidth: 3
+                    }
+                },
+
+              }
+            },
+
+            series: [{
+                type: 'line',
+                color:'#3F51B5',
+                name: 'Post by Hour',
+                data: hourData,
+            },{
+                type: 'line',
+                dataLabels: {
+                  enabled: true,
+                  color: '#53585F',
+                  formatter : function() {
+                    return '<b>' + $.number(this.y) + '</b> Post, <br/><b>' + moment(this.x).format('MMM DD')+ '</b>';
+                  }
+                },
+                color: '#90ee7e',
+                name: 'Post by Day',
+                data: dayData,
+            }],
+
+            exporting: {
+              enabled: false
+            }
+        });
+
+
+        Highcharts.setOptions({
+          global: {
+                  timezoneOffset: -7 * 60
+          }
+        });
+
+
+    });
+    </script>
+
+
+    <!-- Page -->
+    <div class="pages page-break">
+      <!--header-->
+      <br/>
+        <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="well tweets">
+              <div class="row">
+                <img src="images/twitter-big22.png" class="image-left"/>
+                <img src="images/instagram.png" class="fb-logo image-left2-fb"/>
+                <img class="image-right-ig top-imgRight"/>
+
+                <div class="col-xs-3 head-left">
+                      <h5 class="top-writing top-title"><b>GDILAB</b></h5>
+                      <p class="top-writing top-subtitle" style="margin-top:0px;">Instagram Analysis</p>
+                </div>
+                <div class="col-xs-5">
+                  <p class="top-writing head-center">
+                    <b>Instagram User</b>: <span class="top-query">Billy Boen - @billyboenyot</span>
+                    <br/>
+                    <b>Periode</b>: <span class="top-date">08 May - 15 May 2017</span>
+                  </p>
+                </div>
+                <div class="col-xs-2 col-xs-offset-1">
+                  <!-- <img src="../images/BBG.png" class="company-logo" style="float:right;" /> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- Copy New HEADER 1 END -->
+        <!-- End Header -->
+
+
+      <div style="clear:both"></div>
+
+      <!-- Content -->
+      <div class="row-fluid">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div class="row">
+
+            <br/>
+            <br/>
+            <div class="col-xs-12">
+              <div class="row">
+                <div class="col-xs-5">
+                  <h4 style="margin-bottom:5px;"><b>Basic Info</b></h4>
+                  <p class="top-writing">
+                  	Informasi kuantitatif tentang jumlah follower Instagram dan aktivitas serta interaksi yang terjadi di Instagram.
+                  </p>
+                  <br/>
+                </div>
+                <div class="col-xs-5 col-xs-offset-1">
+                	<h4 style="margin-bottom:5px;"><b>User</b></h4>
+                  <p class="top-writing">
+                  	Informasi kuantitatif tentang aktivitas dari user lain yang memberikan like dan komentar pada postingan Instagram. Serta informasi tentang user lain yang sering kita tandai (tag) pada sebuah postingan.
+                  </p>
+                  <br/>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-6" style="padding-left: 40px;">
+                  <div class="row">
+                  	<div class="col-xs-12" style="margin-top: 6px;margin-left: 0px;font-size:15px;">
+	                  <p>
+	                  	<img src="images/post.png" class="twitter-logo" style="width: 40px;" />&nbsp;&nbsp;
+	                    <b><span class="totalPostCount"></span> Posts</b> &nbsp;
+                   </p>
+	                </div>
+	              </div>
+
+                  <div class="row">
+                    <div class="col-xs-12" style="margin-top: 6px;margin-left: 0px;font-size:15px;">
+                      <p>
+                      	<img src="images/instagram.png" class="twitter-logo" style="width: 40px;" />&nbsp;&nbsp;
+                        <b><span class="totalFollowerCount"></span> Followers</b> &nbsp;
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12" style="margin-top: 6px;margin-left: 0px;font-size:15px;">
+                      <p>
+                      	<img src="images/reach.png" class="twitter-logo" style="width: 40px;"/>&nbsp;&nbsp;
+                        <b><span id="averageFollowerCount"></span> Avg Follower</b> &nbsp;
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12" style="margin-top: 6px;margin-left: 0px;font-size:15px;">
+                      <p>
+                      	<img src="images/like.png" class="twitter-logo" style="width: 40px;" />&nbsp;&nbsp;
+                        <b><span class="totalLikeCount">0</span> Likes</b> &nbsp;
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12" style="margin-top: 6px;margin-left: 0px;font-size:15px;">
+                      <p>
+                      	<img src="images/reach.png" class="twitter-logo" style="width: 40px;"/>&nbsp;&nbsp;
+                        <b><span id="averageLikeCount"></span> Avg Like</b> &nbsp;
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12" style="margin-top: 6px;margin-left: 0px;font-size:15px;">
+                      <p>
+                      	<img src="images/comment.png" class="twitter-logo" style="width: 40px;"/>&nbsp;&nbsp;
+                        <b><span class="totalCommentCount"></span> Comments</b> &nbsp;
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12" style="margin-top: 6px;margin-left: 0px;font-size:15px;">
+                      <p>
+                      	<img src="images/reach.png" class="twitter-logo" style="width: 40px;"/>&nbsp;&nbsp;
+                        <b><span id="averageCommentCount"></span> Avg Comment</b> &nbsp;
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+         <div class="col-sm-6 card-left">
+					<div class="row no-margin">
+						<div class="col-sm-6 col-custom">
+							<div class="people-pie-chart">
+								<div class="overview-key-title">
+									<h5 class="pull-left title-chart">Like User Profile Percentage</h5>
+								</div>
+								<div id="liker" style="width: 95%"></div>
+								<div style="margin-top: -10px;">
+									<h5 class="pull-left title-chart">Top 10 Like User</h5>
+								</div>
+								<table id="tbl-liker" class="table table-striped tbl-liker">
+					            	<tbody>
+
+					            	</tbody>
+				          		</table>
+							</div>
+						</div>
+						<div class="col-sm-6 col-custom">
+							<div class="people-pie-chart">
+								<div class="overview-key-title">
+									<h5 class="pull-left title-chart">Comment User Profile Percentage</h5>
+								</div>
+								<div id="commentator" style="width: 95%"></div>
+								<div style="margin-top: -10px;">
+									<h5 class="pull-left title-chart">Top 10 Comment User</h5>
+								</div>
+								<table id="tbl-commentator" class="table table-striped tbl-liker">
+					            	<tbody>
+
+					            	</tbody>
+				          		</table>
+							</div>
+               <br/><br/><br/><br/><br/><br/>
+						</div>
+					</div>
+				</div>
+
+              </div>
+
+
+              			<div class="row no-margin" style="margin-top: 16px">
+
+              			</div>
+                </div>
+                <br/><br/><br/><br/><br/><br/>
+          </div>
+        </div>
+      </div>
+
+      <!--footer-->
+        <div class="row-fluid">
+          <div class="col-xs-10 col-xs-offset-1 footer">
+            <div class="well tweets">
+              <div class="row">
+                <div class="col-xs-4">
+                  <p class="top-writing bottom-title" style="margin-top:0px;"><b><span style="color: #2C2D94">GDI</span> ANALYTICS</b> SocialMeter</p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-1 col-xs-offset-5 text-right">
+                  <p class="top-writing page-number" style="margin-top:0px; color: #fff;"><b class="two">2</b></p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-2 text-center">
+                  <p class="top-writing bottom-gdilab" style="margin-top:0px;">By: GDILAB &copy; 2017</p>
+                </div>
+              </div>
+            </div>
+            <br/><br/><br/><br/>
+          </div>
+        </div>
+        <!-- End of content -->
+    </div>
+    <!-- Page -->
+
+  <div class="pages">
+
+    <!--header-->
+      <br/>
+        <div class="row-fluid"> <!-- Copy New HEADER 1 START -->
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="well tweets">
+              <div class="row">
+                <img src="images/twitter-big22.png" class="image-left"/>
+                <img src="images/instagram.png" class="fb-logo image-left2-fb"/>
+                <img class="image-right-ig top-imgRight"/>
+
+                <div class="col-xs-3 head-left">
+                      <h5 class="top-writing top-title"><b>GDILAB</b></h5>
+                      <p class="top-writing top-subtitle" style="margin-top:0px;">Instagram Analysis</p>
+                </div>
+                <div class="col-xs-5">
+                  <p class="top-writing head-center">
+                    <b>Instagram User</b>: <span class="top-query">Billy Boen - @billyboenyot</span>
+                    <br/>
+                    <b>Periode</b>: <span class="top-date">08 May - 15 May 2017</span>
+                  </p>
+                </div>
+                <div class="col-xs-2 col-xs-offset-1">
+                  <!-- <img src="../images/BBG.png" class="company-logo" style="float:right;" /> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- Copy New HEADER 1 END -->
+        <!-- End Header -->
+
+      <div style="clear:both"></div>
+
+      <!-- Content -->
+      <div class="row-fluid">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div class="row">
+
+            <div class="col-xs-12">
+              <div class="row">
+                <div class="col-xs-5">
+                  <h4 style="margin-bottom:5px;"><b>Media</b></h4>
+                  <p class="top-writing">
+                    Informasi kuantitatif tentang media yang digunakan user dalam menyajikan postingan, baik foto maupun video, melalui perbandingan persentase, jumlah likes, dan jumlah komentar.
+                  </p>
+                  <br/>
+                </div>
+                <div class="col-xs-5 col-xs-offset-1">
+                  <h4 style="margin-bottom:5px;"><b>Saran & Tugas Minggu ini</b></h4>
+                  <p class="top-writing">
+                    Rangkuman informasi mengenai aktivitas yang terjadi pada akun Instagram.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row no-margin" style="margin-top: 16px">
+        <div class="col-sm-12 card-left">
+          <div class="row no-margin">
+
+            <div class="col-sm-3 col-custom">
+              <div class="people-pie-chart">
+                <div class="overview-key-title">
+                  <h5>Media Type Liked</h5>
+                </div>
+                <div id="liked" style="width: 95%"></div>
+                <div class="overview-key-title" style="padding-top: 0;">
+                  <h5>Top Media Liked</h5>
+
+                    <div class="overview-key-title">
+                      <div class="row no-margin">
+                        <div class="media-container-like"> <!-- style="height: 62vh;" -->
+                          <div id="media-container-like" class="row no-margin">  <!-- scroll-custom -->
+
+                          </div>
+                        </div>
+                     </div>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-custom">
+              <div class="people-pie-chart">
+                <div class="overview-key-title">
+                  <h5>Media Type Commented</h5>
+                </div>
+                <div id="commented" style="width: 95%"></div>
+                <div class="overview-key-title" style="padding-top: 0;">
+                  <h5>Top Media Commented</h5>
+
+                    <div class="overview-key-title">
+                      <div class="row no-margin">
+                        <div class="media-container-comment"> <!-- style="height: 62vh;" -->
+                          <div id="media-container-comment" class="row no-margin">  <!-- scroll-custom -->
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-custom">
+              <div class="people-pie-chart">
+                <div class="overview-key-title">
+                  <h3 style="margin-bottom:5px;">Total Posting</h3>
+                  <ol>
+                    <li class="wrapResumeIG">will be filled by text, max 255 characters here</li>
+                  </ol>
+
+                  <h3 style="margin-bottom:5px;">Interaksi</h3>
+                  <ol>
+                    <li class="wrapResumeIG">will be filled by text, max 255 characters here</li>
+                  </ol>
+
+                  <h3 style="margin-bottom:5px;">Pemilihan kata/konten</h3>
+                  <ol>
+                    <li class="wrapResumeIG">will be filled by text, max 255 characters here</li>
+                  </ol>
+
+                  <h3 style="margin-bottom:5px;">Media Type</h3>
+                  <ol>
+                    <li class="wrapResumeIG">will be filled by text, max 255 characters here</li>
+                  </ol>
+
+                  <h3 style="margin-bottom:5px;">Hashtag Campaign</h3>
+                  <ol>
+                    <li class="wrapResumeIG">will be filled by text, max 255 characters here</li>
+                  </ol>
+                </div>
+
+              </div>
+            </div>
+            </div>
+
+          </div>
+           <br/><br/><br/><br/><br/><br/>
+        </div>
+      </div>
+    </div>
+
+          </div>
+        </div>
+      </div>
+
+  <!--footer-->
+        <div class="row-fluid">
+          <div class="col-xs-10 col-xs-offset-1 footer">
+            <div class="well tweets">
+              <div class="row">
+                <div class="col-xs-4">
+                  <p class="top-writing bottom-title" style="margin-top:0px;"><b><span style="color: #2C2D94">GDI</span> ANALYTICS</b> SocialMeter</p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-1 col-xs-offset-5 text-right">
+                  <p class="top-writing page-number" style="margin-top:0px; color: #fff;"><b class="two">2</b></p> <!-- Copy New FOOTER -->
+                </div>
+                <div class="col-xs-2 text-center">
+                  <p class="top-writing bottom-gdilab" style="margin-top:0px;">By: GDILAB &copy; 2017</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- End of content -->
+    </div>
+    <!-- Page -->
+
+<script type="text/javascript">
+  /*<![CDATA[*/
+
+function totalFollowers(){
+  var valueUsername = "@billyboenyot;";
+  $('.totalFollowerCount').text($.number(10992, 0, ',', '.'));
+  $('.usernameIG').text(valueUsername);
+  $('.fullnameIG').text("Billy Boen;");
+  $('.image-right-ig').attr("src","https://scontent.cdninstagram.com/t51.2885-19/s150x150/17933848_1269870023120828_4200964746951786496_a.jpg");
+}
+
+function totalPost(){
+
+  $('.totalPostCount').text($.number(13, 0, ',', '.'));
+
+}
+
+function totalLike(){
+
+  $('.totalLikeCount').text($.number(1622, 0, ',', '.'));
+
+}
+
+function totalComment(){
+
+  $('.totalCommentCount').text($.number(44, 0, ',', '.'));
+
+}
+
+function averageLike(){
+
+      $('#averageLikeCount').text($.number(124.77, 2, ',', '.'));
+
+}
+
+function averageComment(){
+
+      $('#averageCommentCount').text($.number(3.38, 2, ',', '.'));
+
+}
+
+function averageFollower(){
+
+      $('#averageFollowerCount').text($.number(12.88, 2, ',', '.'));
+
+}
+
+function likerChart() {
+
+  var likerCount = [];
+
+  var json = [{"id":"Regular User","value":9},{"id":"Famous User","value":0},{"id":"Online Shop","value":1}];
+   _.each(json, function(item){
+             if(item.value == 0){
+
+             }else{
+               likerCount.push({"name":item.id,"y":item.value});
+             }
+             });
+
+           Highcharts.chart('liker',{
+              chart: {
+                  plotBackgroundColor: null,
+                  plotBorderWidth: null,
+                  plotShadow: false,
+                  type: 'pie',
+                  height: 190,
+                  width: 250
+              },
+              colors: ['#0071bc', '#ffac33', '#5c913b'],
+              title: {
+                  text: ''
+              },
+              tooltip: {
+                  pointFormat: '{series.name}: <b>{point.y}</b>',
+                  /* {point.percentage:.2f}% */
+                  backgroundColor: '#FFFFFF'
+              },
+              navigation: {
+              buttonOptions:{
+                enabled:false
+              }
+            },
+            legend:{
+              itemMarginBottom: 10,
+              itemStyle: {
+                "fontSize": "9px"
+              }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    showInLegend: true,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.percentage:.1f} %',
+                        /* <b>{point.name}</b>:  */
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                            fontFamily: 'Larsseitlight, sans-serif', lineHeight: '18px'
+                        }
+                    }
+                },
+                series: {
+                    cursor: 'pointer',
+                    point: {
+                        events: {
+                            click: function () {
+                              firstLoad = 10;
+                              console.log(this.x);
+                              loadTweet(this.x, 0);
+                            }
+                        }
+                    }
+                },
+            },
+              credits: {
+              enabled:false
+            },
+              series: [{
+                  name: 'Percentage',
+                  colorByPoint: true,
+                  data: likerCount
+              }]
+          });
+         }
+
+function commentatorChart() {
+  $.ajax({
+     type: "GET",
+     //url: "/api/data/instagram/user/analyze-commenttator-percentage?id=1980",
+     //url: "/api/data/instagram/user/analyze-commenttator-percentage?id="+project_id+"&start="+startDate+"&end="+endDate+"&limit=10",
+       data: '',
+         beforeSend: function() {
+
+         },
+         complete: function() {
+
+         },
+         success: function(data){
+           var commentatorCount = [];
+           var objAnalyzeCommenttatorPercentage = [{"id":"Regular User","value":9},{"id":"Famous User","value":1},{"id":"Online Shop","value":0}];
+
+           _.each(objAnalyzeCommenttatorPercentage, function(item){
+             if(item.value == 0){
+
+             }else{
+               commentatorCount.push({"name":item.id,"y":item.value});
+             }
+             });
+
+           $('#commentator').highcharts({
+              chart: {
+                  plotBackgroundColor: null,
+                  plotBorderWidth: null,
+                  plotShadow: false,
+                  type: 'pie',
+                  height: 190,
+                  width: 250
+              },
+              colors: ['#0071bc', '#ffac33', '#5c913b'],
+              title: {
+                  text: ''
+              },
+              tooltip: {
+                  pointFormat: '{series.name}: <b>{point.y}</b>',
+                  /* {point.percentage:.2f}% */
+                  backgroundColor: '#FFFFFF'
+              },
+              navigation: {
+              buttonOptions:{
+                enabled:false
+              }
+            },
+            legend:{
+              itemMarginBottom: 10,
+              itemStyle: {
+                "fontSize": "9px"
+              }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    showInLegend: true,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.percentage:.1f} %',
+                        /* <b>{point.name}</b>:  */
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                            fontFamily: 'Larsseitlight, sans-serif', lineHeight: '18px'
+                        }
+                    }
+                },
+                series: {
+                    cursor: 'pointer',
+                    point: {
+                        events: {
+                            click: function () {
+                              firstLoad = 10;
+                              console.log(this.x);
+                              loadTweet(this.x, 0);
+                            }
+                        }
+                    }
+                },
+            },
+              credits: {
+              enabled:false
+            },
+              series: [{
+                  name: 'Commentator',
+                  colorByPoint: true,
+                  data: commentatorCount
+              }]
+          });
+         }
+
+     });
+}
+
+function likerTable(){
+  $.ajax({
+     type: "GET",
+       //url: "/api/data/instagram/user/analyze-liker?id=1980",
+       //url: "/api/data/instagram/user/analyze-liker?id="+project_id+"&start="+startDate+"&end="+endDate+"&limit=10",
+       data: '',
+         beforeSend: function() {
+
+         },
+         complete: function() {
+
+         },
+         success: function(json){
+           var content = '';
+           var noContent = '';
+           var apendExeSum = '';
+           var contentExeSum = [];
+         var a = 1;
+         var color = ['#0064B2','#8600B9','#E07F9E','#00844B','#00CFD5','#FCD425','#FE5552','#FA4DA7','#00A2D3','#87837A'];
+         var objAnalyzeLiker = [{"id":"3114237085","username":"a.sajadah","fullName":"Sajadah Universa","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/15337313_713883548774950_3337658414737129472_a.jpg","bio":"\u00f0\u009f\u008c\u0095Premium Prayer Mat\n\u00f0\u009f\u008c\u0091Crafted in Indonesia ~\n\u00e2\u009a\u00aa\u00ef\u00b8\u008fChat SA for FAQ & Order\n\u00f0\u009f\u0094\u00b4Whatsapp : 082111144402\n\u00f0\u009f\u0094\u00b5LINE : klik link dibawah","accountType":"Online Shop","value":11,"totalMedia":648,"totalFollower":11267,"totalFollows":3275},{"id":"23071482","username":"rianaree","fullName":"RianaRee","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/12826256_486320521576112_1360509647_a.jpg","bio":"A Shopaholic with a Big Dream, still #baladaentrepreneur,\u00e2\u009d\u00a4\u00ef\u00b8\u008ffashion, beauty junkie, foodie,passion for Jazz,living in style & obsessed with AdrianaLima","accountType":"Regular User","value":9,"totalMedia":5248,"totalFollower":3619,"totalFollows":392},{"id":"4244442294","username":"putrii_gemini","fullName":"putri gemini","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17662368_424379231248848_7183340632285380608_a.jpg","bio":"Pin   : D48C4C2D\nLine : diahrara_\nWa   : 083146236823","accountType":"Regular User","value":9,"totalMedia":20,"totalFollower":116,"totalFollows":265},{"id":"185898808","username":"enggarpradityo","fullName":"enggar pradityo","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/11311380_1225472584147024_1914074993_a.jpg","bio":"","accountType":"Regular User","value":8,"totalMedia":230,"totalFollower":374,"totalFollows":1177},{"id":"1629838123","username":"alawiyahismii","fullName":"Resep Makanan & Review Buku \u00f0\u009f\u0092\u0090","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/13277761_537582183115638_1950190736_a.jpg","bio":"Hello I am Mia \u00f0\u009f\u008c\u00ba\n#ayojajandirumah \u00f0\u009f\u0098\u00bb\nCheck my blog \u00e2\u00a4\u00b5\u00ef\u00b8\u008f","accountType":"Regular User","value":8,"totalMedia":64,"totalFollower":762,"totalFollows":386},{"id":"1445967205","username":"bridspedia","fullName":"Birds Pedia","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17077540_654719444716428_6541695642366902272_a.jpg","bio":"The Official Instagram Account of birdspedia|Positive Quote","accountType":"Regular User","value":8,"totalMedia":61,"totalFollower":99,"totalFollows":235},{"id":"685057570","username":"hennykristianus","fullName":"Henny Kristianus","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/12346226_548353255330666_865929907_a.jpg","bio":"Founder & Project Director of Tangan Pengharapan Foundation\u00e2\u0080\u00a2 Proud Indonesian\u00e2\u0080\u00a2 Passionate to defeat poverty\u00e2\u0080\u00a2 \u00f0\u009f\u0093\u00a7ytpindonesia@gmail.com \u00e2\u0098\u008e\u00ef\u00b8\u008f+6281314333341","accountType":"Regular User","value":7,"totalMedia":5359,"totalFollower":3069,"totalFollows":222},{"id":"3299134835","username":"vandy_ak","fullName":"Vandy Apriando Kimsbun","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/15876283_247262222368956_7935580415895535616_a.jpg","bio":"Xiaomi Mi5 gold user ...\nOrdinary person ...","accountType":"Regular User","value":7,"totalMedia":68,"totalFollower":126,"totalFollows":333},{"id":"1370532089","username":"ari_wijayae","fullName":"Siswoyo Ari Wijaya.","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/13397420_985654864875447_1698381733_a.jpg","bio":"Just call me woyo or ari.\n.\n\"Bebaskan langkah mu pergi \u00f0\u009f\u0091\u00a3\nDan beranikan diri untuk meraih suksesmu\" \u00f0\u009f\u0091\u008a\u00f0\u009f\u0098\u008a\n[Part of YOTCA batch 7]","accountType":"Regular User","value":7,"totalMedia":199,"totalFollower":385,"totalFollows":251},{"id":"308494751","username":"astriretnoo","fullName":"Astri Retno Saptika","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/15875876_1214431275318802_8703414456958320640_a.jpg","bio":"Nothing Is Impossible\n\u00e2\u0080\u00a2\n\u00e2\u0080\u00a2\npart of @kenezphoto","accountType":"Regular User","value":6,"totalMedia":185,"totalFollower":211,"totalFollows":127}];
+         $.each(objAnalyzeLiker, function(i, item){
+            content += '<tr>'+
+                '<td align="right"><div class="legends-hashtag" style="background-color:'+color[i]+'"></div></td>'+
+                '<td><a href="javascript:void(0);" class="chart-klik">'+item.fullName+'</a></td>'+
+                '<td>'+$.number(item.value)+'</td>'+
+           '</tr>';
+           });
+
+         noContent +=
+           '<tspan class="noData">No data to display</tspan>';
+
+         $.each(objAnalyzeLiker, function(i, item){
+           contentExeSum.push(["@"+item.username]);
+         });
+
+         apendExeSum +=
+           ''+contentExeSum[0]+', '+contentExeSum[1]+', '+contentExeSum[2]+', '+contentExeSum[3]+', '+contentExeSum[4]+'';
+
+         $("#listLiker").html(apendExeSum);
+
+         if(json.length == 0){
+           $("table#tbl-liker").html(noContent);
+         }else{
+           $('table#tbl-liker tbody').html(content);
+         }
+         },
+         complete : function(data){
+
+         }
+
+     });
+}
+
+function commentatorTable(){
+  $.ajax({
+     type: "GET",
+     //url: "/api/data/instagram/user/analyze-commenttator?id=1980",
+     //url: "/api/data/instagram/user/analyze-commenttator?id="+project_id+"&start="+startDate+"&end="+endDate+"&limit=10",
+       data: '',
+         beforeSend: function() {
+
+         },
+         complete: function() {
+
+         },
+         success: function(json){
+           var content = '';
+           var noContent = '';
+           var apendExeSum = '';
+           var contentExeSum = [];
+         var a = 1;
+         var color = ['#0064B2','#8600B9','#E07F9E','#00844B','#00CFD5','#FCD425','#FE5552','#FA4DA7','#00A2D3','#87837A'];
+         var objAnalyzeCommenttator = [{"id":"104920045","username":"chatpalee","fullName":"Bowling Chatpalee","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/12568257_1713169878929794_41276382_a.jpg","bio":"","accountType":"Regular User","value":2,"totalMedia":315,"totalFollower":296,"totalFollows":162},{"id":"5600625","username":"ruthierich","fullName":"Ruthie Pasaribu","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/10387933_580805968736773_961700398_a.jpg","bio":"A female sentimental sapiosexual who dances like nobody's watching. And sings a lot.","accountType":"Regular User","value":2,"totalMedia":1047,"totalFollower":1262,"totalFollows":745},{"id":"319086539","username":"syatotoroichan","fullName":"syatoto roichan","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/13181545_917293701731321_930630066_a.jpg","bio":"work, rest, ride!!! if only I could ride every day....\u00f0\u009f\u0099\u008c\u00f0\u009f\u0099\u008c\u00f0\u009f\u0099\u008c\n\u00f0\u009f\u0093\u00b1LINE: syatotoroichan","accountType":"Regular User","value":1,"totalMedia":420,"totalFollower":231,"totalFollows":195},{"id":"4478668","username":"ariefmuhammad","fullName":"ariefmuh","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17437524_133449187189662_7226216358793445376_a.jpg","bio":"Youtuber.\nCreativepreneur.\n\u00e2\u0098\u008e\u00ef\u00b8\u008f : ariefmuh26@gmail.com","accountType":"Famous User","value":1,"totalMedia":1130,"totalFollower":597110,"totalFollows":782},{"id":"225783303","username":"tigerwu633","fullName":"michael wu","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/13129426_495931157281415_43911364_a.jpg","bio":"","accountType":"Regular User","value":1,"totalMedia":251,"totalFollower":635,"totalFollows":855},{"id":"23071482","username":"rianaree","fullName":"RianaRee","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/12826256_486320521576112_1360509647_a.jpg","bio":"A Shopaholic with a Big Dream, still #baladaentrepreneur,\u00e2\u009d\u00a4\u00ef\u00b8\u008ffashion, beauty junkie, foodie,passion for Jazz,living in style & obsessed with AdrianaLima","accountType":"Regular User","value":1,"totalMedia":5244,"totalFollower":3618,"totalFollows":392},{"id":"1043183801","username":"irvanhilman","fullName":"IRVAN HILMAN","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/18012149_1846159582324689_4216598488038768640_a.jpg","bio":"Property & Car\n#Sharing","accountType":"Regular User","value":1,"totalMedia":215,"totalFollower":421,"totalFollows":799},{"id":"685057570","username":"hennykristianus","fullName":"Henny Kristianus","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/12346226_548353255330666_865929907_a.jpg","bio":"Founder & Project Director of Tangan Pengharapan Foundation\u00e2\u0080\u00a2 Proud Indonesian\u00e2\u0080\u00a2 Passionate to defeat poverty\u00e2\u0080\u00a2 \u00f0\u009f\u0093\u00a7ytpindonesia@gmail.com \u00e2\u0098\u008e\u00ef\u00b8\u008f+6281314333341","accountType":"Regular User","value":1,"totalMedia":5353,"totalFollower":3057,"totalFollows":221},{"id":"295450387","username":"margarethajo","fullName":"Yohana Margaretha","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/14553373_576069799266216_2113371145129426944_a.jpg","bio":"Twitter : @Yohana_MetroTV\nCP : ymargaretha.official@gmail.com  \n\u00f0\u009f\u00a4\u0098Bon Jovi\u00f0\u009f\u0092\u0098Guns N' Roses\u00f0\u009f\u0094\u00ab\u00f0\u009f\u008c\u00b7","accountType":"Regular User","value":1,"totalMedia":521,"totalFollower":18767,"totalFollows":655},{"id":"185898808","username":"enggarpradityo","fullName":"enggar pradityo","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/11311380_1225472584147024_1914074993_a.jpg","bio":"","accountType":"Regular User","value":1,"totalMedia":182,"totalFollower":345,"totalFollows":1165}];
+         $.each(objAnalyzeCommenttator, function(i, item){
+            content += '<tr>'+
+                '<td align="right"><div class="legends-hashtag" style="background-color:'+color[i]+'"></div></td>'+
+                '<td><a href="javascript:void(0);" class="chart-klik">'+item.fullName+'</a></td>'+
+                '<td>'+$.number(item.value)+'</td>'+
+           '</tr>';
+           });
+
+         noContent +=
+           '<tspan class="noData">No data to display</tspan>';
+
+         $.each(objAnalyzeCommenttator, function(i, item){
+           contentExeSum.push(["@"+item.username]);
+         });
+
+         apendExeSum +=
+           ''+contentExeSum[0]+', '+contentExeSum[1]+', '+contentExeSum[2]+', '+contentExeSum[3]+', '+contentExeSum[4]+'';
+
+         $("#listComment").html(apendExeSum);
+
+         if(json.length == 0){
+           $("table#tbl-commentator").html(noContent);
+         }else{
+           $('table#tbl-commentator tbody').html(content);
+         }
+         },
+         complete : function(data){
+
+         }
+
+     });
+}
+
+function showMediaByLike(subMedia){
+  $('#hashtagUserLike').val(subMedia);
+  $.ajax({
+    type: "GET",
+    //url: "/api/data/instagram/user/1980/media-type-like?type=image&limit=9&offset=0",
+    //url: "/api/data/instagram/user/"+project_id+"/media-type-like?type=all&limit=6&offset=0&start="+startDate+"&end="+endDate,
+    data: "",
+    dataType: "json",
+    cache: false,
+    beforeSend : function(){
+      $('.media-container-like').addClass('spin-loading');
+          $('.media-container-like').addClass('blur-loading');
+    },success : function(data){
+
+    },complete : function(data){
+      var obj = [{"id":"1512017841884610740_421022659","type":"image","caption":"Naksir dari kali pertama ngeliat dari jauh di kantin Utah State University yg namanya The Hub. Sudah punya pacar ternyata. \nKesempatan dtg setahun setelahnya. Pacaran. Nikah. Hingga saat ini. \nBerantem, baikan, berantem, baikan, ketawa2, nangis, baekan lagi, berantem lagi, trrusssssssssss begitu selama 17 tahun. \nDia telah menemani sy di kala susah, sangat susah, bahagia, dan sangat bahagia, kami mengucapkan sumpah untuk terus bersama in rich or poor, in health and sickness. Ditengah perjalanan memang tidak mulus, bahkan berlubang dan berjurang, tapi we are here, strongest than ever. \nDia selalu menemani saya ke Gereja tiap minggu. Dia yg selalu maksa saya ke Gereja dikala saya lagi agak ngga mood. Dia yg ngedidik James dengan cinta kasih. \nMy home is where she is. She is my bestest friend. Everyday, full of love. Happiest ever in my life. And this is only the beginning. We are ready to live healthy, live long, travel the world, enjoy our everyday in laughters, happy tears, and love in the air. \nI love you so much, dear wifey. Happy 17th Anniversary. God bless us, our love, forever and ever. #bersyukurterus #ilovemywifey","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18380288_118848595353286_6374961034796466176_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18380288_118848595353286_6374961034796466176_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18380288_118848595353286_6374961034796466176_n.jpg","link":"https:\/\/www.instagram.com\/p\/BT7xDdXlcC0\/","createdTime":"May 11, 2017 8:36:34 AM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":30,"totalLike":411,"totalFollower":10941,"response":0,"totalViewer":0},{"id":"1515152130264501701_421022659","type":"image","caption":"Udah tau anak muda ini udah lama. Tapi baru berkesempatan ketemu siang tadi di Socio Digi Leaders 2017 di UGM. Muda, sukses, ngetop, baik, kocak. \u00f0\u009f\u00a4\u0093 Folower twiternya 'cuma' 4jutaan, folower IGnya 'cuma' 600ribu, Youtubenya 'cuma' 700ribu. TOP! \nSebagai Youtuber\/Vloger, kak Arief ngga lupa untuk nyelipin nilai2 edukasi seperti \"Sukses itu ngga ada yg instan, butuh perjuangan. Jangan ngeliat org sukses sekarang pas udah enaknya, dulunya juga mereka mulai dari nol. Seringkali perjuangannya ngga kita tau.\" Terus menginspirasi dan menghibur Indonesia ya @ariefmuhammad. Stay ON TOP! Cheers. Lets collaborate.","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18512459_879245422213430_6811980511284559872_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18512459_879245422213430_6811980511284559872_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18512459_879245422213430_6811980511284559872_n.jpg","link":"https:\/\/www.instagram.com\/p\/BUG5tW5F43F\/","createdTime":"May 15, 2017 4:23:50 PM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":4,"totalLike":286,"totalFollower":10994,"response":0,"totalViewer":0},{"id":"1509789835342457277_421022659","type":"carousel","caption":"On a beautiful Sunday, from bfast di warteg Jl. Ciliman Cikini, ngegym bareng, ke Gading sewa tux utk James, sampe ngopi\/ngemil sebelum ke Gereja sore.. with this girl. \nConnected in all levels. Cant count how many tears and laughs in one day. All i can say, i am blessed. Super blessed. \n#bersyukurterus","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18381935_241939206210201_3765128886141059072_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18381935_241939206210201_3765128886141059072_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18381935_241939206210201_3765128886141059072_n.jpg","link":"https:\/\/www.instagram.com\/p\/BTz2dslFSm9\/","createdTime":"May 8, 2017 6:49:55 AM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":2,"totalLike":161,"totalFollower":10898,"response":0,"totalViewer":0},{"id":"1513727660647559317_421022659","type":"image","caption":"I love her, not because she is always perfect. But she is ting tong (bahasa Thai, artinya konyol), baik hatinya, pretty, caring, and loving me so much. \u00f0\u009f\u0098\u008d Nahhhhh, i love her because she is immortal, she is a dracula. \u00f0\u009f\u00a4\u0093","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18382060_1774153712894614_3193864554639523840_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18382060_1774153712894614_3193864554639523840_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18382060_1774153712894614_3193864554639523840_n.jpg","link":"https:\/\/www.instagram.com\/p\/BUB10mLlLCV\/","createdTime":"May 13, 2017 5:13:40 PM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":1,"totalLike":127,"totalFollower":10966,"response":0,"totalViewer":0},{"id":"1513102875009888281_421022659","type":"image","caption":"Fridate. Everyday is a Valentine's Day? Well at least thats what we both feel and do. \u00f0\u009f\u0098\u008d #bersyukurterus","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18380776_1789921374670372_7787969708556288_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18380776_1789921374670372_7787969708556288_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18380776_1789921374670372_7787969708556288_n.jpg","link":"https:\/\/www.instagram.com\/p\/BT_nwxNljAZ\/","createdTime":"May 12, 2017 8:32:20 PM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":0,"totalLike":121,"totalFollower":10951,"response":0,"totalViewer":0},{"id":"1515154299491434984_421022659","type":"carousel","caption":"Ketemu untuk kesekian kalinya.. Musisi berhati mulia, mas @erixsoekamti, yg skg lg kembangin DOES University, totally FREE. Google aja. Muka boleh sangar, tatoan, anting gede,.. Tapi baik banget nih org. Cocok dijadikan idola anak muda. \u00f0\u009f\u00a4\u0093\n\nTerus menginspirasi lewat musik dan karya2 ya Bro. Sukses terus. Salut dgn apa yg loe kerjakan. Stay ON TOP!","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18443274_479690279051115_8651557043301253120_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18443274_479690279051115_8651557043301253120_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18443274_479690279051115_8651557043301253120_n.jpg","link":"https:\/\/www.instagram.com\/p\/BUG6M7JF8Ho\/","createdTime":"May 15, 2017 4:28:09 PM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":2,"totalLike":103,"totalFollower":10994,"response":0,"totalViewer":0}];
+          var content = '';
+          var noContent = '';
+          var j = 1;
+          allMediaID2 = [];
+          $.each(obj, function(i, item){
+        allMediaID2.push(item.id.substring(0, item.id.indexOf("_")));
+      });
+          noContent +=
+           '<tspan class="noData">No data to display</tspan>';
+        $.each(obj, function(i, item){
+        if(item.type == 'video'){
+            content+=
+                '<div class="col-sm-6 col-custom img-gallery detect-width">'+
+                '<span style="float: left;font-weight: bold;">#'+j+'</span>'+
+            '<a href="'+item.id+'" class="media-id" data-type="2" data-toggle="modal" data-target="#modal-box-ig">'+
+              '<div class="well auto-height no-padding" style="background-image: url('+item.imageLowRes+'), url(images/image_deleted.png);">'+
+              '<span class="video-ico"><i class="fa fa-play-circle-o"></i></span>'+
+                '<div class="img-hover">'+
+                  '<div class="card-img1-cover"></div>'+
+                  '<div class="card-profile text-center">'+
+                    '<div class="float-username">'+
+                      '<p class="card-imgTitle1">'+
+                        //'@'+item.username+''+
+                      '</p>'+
+                    '</div>'+
+                  '</div>'+
+                  '<div class="card-imgLabel1 text-center">'+
+                    '<h5 class="card-imgNum1">'+
+                      /*'<span><i class="fa fa-heart"></i>&nbsp;</span>'+
+                      '<span>'+$.number(item.totalLike)+'</span>&nbsp;&nbsp;'+
+                      '<span><i class="fa fa-commenting">&nbsp;</i></span>'+
+                      '<span>'+$.number(item.totalComment)+'</span>'+*/
+                    '</h5>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'+
+            '</a>'+
+          '</div>';
+          }else{
+            content+=
+                '<div class="col-sm-6 col-custom img-gallery detect-width">'+
+                '<span style="float: left;font-weight: bold;">#'+j+'</span>'+
+            '<a href="'+item.id+'" class="media-id" data-type="2" data-toggle="modal" data-target="#modal-box-ig">'+
+              '<div class="well auto-height no-padding" style="background-image: url('+item.imageLowRes+'), url(images/image_deleted.png);">'+
+                '<div class="img-hover">'+
+                  '<div class="card-img1-cover"></div>'+
+                  '<div class="card-profile text-center">'+
+                    '<div class="float-username">'+
+                      '<p class="card-imgTitle1">'+
+                        //'@'+item.username+''+
+                      '</p>'+
+                    '</div>'+
+                  '</div>'+
+                  '<div class="card-imgLabel1 text-center">'+
+                    '<h5 class="card-imgNum1">'+
+                      /*'<span><i class="fa fa-heart"></i>&nbsp;</span>'+
+                      '<span>'+$.number(item.totalLike)+'</span>&nbsp;&nbsp;'+
+                      '<span><i class="fa fa-commenting">&nbsp;</i></span>'+
+                      '<span>'+$.number(item.totalComment)+'</span>'+*/
+                    '</h5>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'+
+            '</a>'+
+          '</div>';
+          }
+          j++;
+        });
+         if(obj.length == 0){
+           $("#media-container-like").html(noContent);
+         }else{
+           $('#media-container-like').html(content);
+         }
+      }
+  });
+}
+
+function showMediaByComment(subMedia){
+  $('#hashtagUserComment').val(subMedia);
+  $.ajax({
+      type: "GET",
+      //url: "/api/data/instagram/user/1980/media-type-comment?type=image&limit=9&offset=0",
+      //url: "/api/data/instagram/user/"+project_id+"/media-type-comment?type=all&limit=6&offset=0&start="+startDate+"&end="+endDate,
+        data: "",
+      dataType: "json",
+        cache: false,
+      beforeSend : function(){
+        $('.media-container-comment').addClass('spin-loading');
+          $('.media-container-comment').addClass('blur-loading');
+      },success : function(data){
+
+        },complete : function(data){
+          //var obj = JSON.parse(data.responseText);
+          var obj = [{"id":"1512017841884610740_421022659","type":"image","caption":"Naksir dari kali pertama ngeliat dari jauh di kantin Utah State University yg namanya The Hub. Sudah punya pacar ternyata. \nKesempatan dtg setahun setelahnya. Pacaran. Nikah. Hingga saat ini. \nBerantem, baikan, berantem, baikan, ketawa2, nangis, baekan lagi, berantem lagi, trrusssssssssss begitu selama 17 tahun. \nDia telah menemani sy di kala susah, sangat susah, bahagia, dan sangat bahagia, kami mengucapkan sumpah untuk terus bersama in rich or poor, in health and sickness. Ditengah perjalanan memang tidak mulus, bahkan berlubang dan berjurang, tapi we are here, strongest than ever. \nDia selalu menemani saya ke Gereja tiap minggu. Dia yg selalu maksa saya ke Gereja dikala saya lagi agak ngga mood. Dia yg ngedidik James dengan cinta kasih. \nMy home is where she is. She is my bestest friend. Everyday, full of love. Happiest ever in my life. And this is only the beginning. We are ready to live healthy, live long, travel the world, enjoy our everyday in laughters, happy tears, and love in the air. \nI love you so much, dear wifey. Happy 17th Anniversary. God bless us, our love, forever and ever. #bersyukurterus #ilovemywifey","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18380288_118848595353286_6374961034796466176_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18380288_118848595353286_6374961034796466176_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18380288_118848595353286_6374961034796466176_n.jpg","link":"https:\/\/www.instagram.com\/p\/BT7xDdXlcC0\/","createdTime":"May 11, 2017 8:36:34 AM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":30,"totalLike":411,"totalFollower":10941,"response":0,"totalViewer":0},{"id":"1515152130264501701_421022659","type":"image","caption":"Udah tau anak muda ini udah lama. Tapi baru berkesempatan ketemu siang tadi di Socio Digi Leaders 2017 di UGM. Muda, sukses, ngetop, baik, kocak. \u00f0\u009f\u00a4\u0093 Folower twiternya 'cuma' 4jutaan, folower IGnya 'cuma' 600ribu, Youtubenya 'cuma' 700ribu. TOP! \nSebagai Youtuber\/Vloger, kak Arief ngga lupa untuk nyelipin nilai2 edukasi seperti \"Sukses itu ngga ada yg instan, butuh perjuangan. Jangan ngeliat org sukses sekarang pas udah enaknya, dulunya juga mereka mulai dari nol. Seringkali perjuangannya ngga kita tau.\" Terus menginspirasi dan menghibur Indonesia ya @ariefmuhammad. Stay ON TOP! Cheers. Lets collaborate.","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18512459_879245422213430_6811980511284559872_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18512459_879245422213430_6811980511284559872_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18512459_879245422213430_6811980511284559872_n.jpg","link":"https:\/\/www.instagram.com\/p\/BUG5tW5F43F\/","createdTime":"May 15, 2017 4:23:50 PM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":4,"totalLike":286,"totalFollower":10994,"response":0,"totalViewer":0},{"id":"1509789835342457277_421022659","type":"carousel","caption":"On a beautiful Sunday, from bfast di warteg Jl. Ciliman Cikini, ngegym bareng, ke Gading sewa tux utk James, sampe ngopi\/ngemil sebelum ke Gereja sore.. with this girl. \nConnected in all levels. Cant count how many tears and laughs in one day. All i can say, i am blessed. Super blessed. \n#bersyukurterus","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18381935_241939206210201_3765128886141059072_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18381935_241939206210201_3765128886141059072_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18381935_241939206210201_3765128886141059072_n.jpg","link":"https:\/\/www.instagram.com\/p\/BTz2dslFSm9\/","createdTime":"May 8, 2017 6:49:55 AM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":2,"totalLike":161,"totalFollower":10898,"response":0,"totalViewer":0},{"id":"1511697668573185722_421022659","type":"image","caption":"SocialMeter.id, hadir sebagai solusi untuk Anda pebisnis yang ingin meningkatkan penjualan bisnis Anda, reach, exposure, dan engagement akun media sosial bisnis (Twitter, Facebook, dan Instagram). SocialMeter.id akan memonitor, menganalisa, dan memberikan ARAHAN untuk apa yang sebaiknya Anda lakukan di ketiga sosmed Anda minggu depan, setiap minggunya, via email.\n\nInilah produk analitik TERBAIK (sangat murah dan sangat praktis) untuk Anda pemilik bisnis yang ingin menaikkan penjualan Anda dengan memaksimalkan akun-akun sosmed bisnis Anda.\n\nBuruan sign up di SocialMeter.id sebelum tanggal 17 Mei 2017, karena Anda akan berhak untuk mendapatkan diskon pembayaran sebesar 20%. Tunggu apalagi? Segera daftarkan bisnis Anda di SocialMeter.id, sebelum tanggal 17 Mei 2017!\n\nSocialMeter.id adalah produk yang dibuat dengan L.E.A.P. Technology (listen-engage-analyze-predict) by @GDILab \n#socialmeterid #analytics #mediasosial #gdilab","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18380591_620808841461541_3605324895497486336_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18380591_620808841461541_3605324895497486336_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18380591_620808841461541_3605324895497486336_n.jpg","link":"https:\/\/www.instagram.com\/p\/BT6oQUvF0a6\/","createdTime":"May 10, 2017 10:00:26 PM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":2,"totalLike":58,"totalFollower":10927,"response":0,"totalViewer":0},{"id":"1512320462486993318_421022659","type":"carousel","caption":"I always smile everytime i see my niece. Lucu. Cute. Love her, also the people she was with (swipe left). #myniece #notsobabyanymore #familylunch #theBoens #bersyukurterus","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18380908_1956341354595512_6277525982245027840_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18380908_1956341354595512_6277525982245027840_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18380908_1956341354595512_6277525982245027840_n.jpg","link":"https:\/\/www.instagram.com\/p\/BT813KxF3mm\/","createdTime":"May 11, 2017 6:37:49 PM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":2,"totalLike":49,"totalFollower":10941,"response":0,"totalViewer":0},{"id":"1515154299491434984_421022659","type":"carousel","caption":"Ketemu untuk kesekian kalinya.. Musisi berhati mulia, mas @erixsoekamti, yg skg lg kembangin DOES University, totally FREE. Google aja. Muka boleh sangar, tatoan, anting gede,.. Tapi baik banget nih org. Cocok dijadikan idola anak muda. \u00f0\u009f\u00a4\u0093\n\nTerus menginspirasi lewat musik dan karya2 ya Bro. Sukses terus. Salut dgn apa yg loe kerjakan. Stay ON TOP!","imageLowRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s320x320\/e35\/18443274_479690279051115_8651557043301253120_n.jpg","imageHightRes":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s640x640\/sh0.08\/e35\/18443274_479690279051115_8651557043301253120_n.jpg","imageThumbnail":"https:\/\/scontent.cdninstagram.com\/t51.2885-15\/s150x150\/e35\/18443274_479690279051115_8651557043301253120_n.jpg","link":"https:\/\/www.instagram.com\/p\/BUG6M7JF8Ho\/","createdTime":"May 15, 2017 4:28:09 PM","userId":"421022659","username":"billyboenyot","fullName":"Billy Boen","profilePicture":"https:\/\/scontent.cdninstagram.com\/t51.2885-19\/s150x150\/17933848_1269870023120828_4200964746951786496_a.jpg","totalComment":2,"totalLike":103,"totalFollower":10994,"response":0,"totalViewer":0}];
+          var content = '';
+          var noContent = '';
+          var j = 1;
+          allMediaID3 = [];
+          $.each(obj, function(i, item){
+        allMediaID3.push(item.id.substring(0, item.id.indexOf("_")));
+      });
+          noContent +=
+           '<tspan class="noData">No data to display</tspan>';
+        $.each(obj, function(i, item){
+          if(item.type == 'video'){
+            content+=
+                '<div class="col-sm-6 col-custom img-gallery detect-width">'+
+                '<span style="float: left;font-weight: bold;">#'+j+'</span>'+
+            '<a href="'+item.id+'" class="media-id" data-type="3" data-toggle="modal" data-target="#modal-box-ig">'+
+              '<div class="well auto-height no-padding" style="background-image: url('+item.imageLowRes+'), url(images/image_deleted.png);">'+
+              '<span class="video-ico"><i class="fa fa-play-circle-o"></i></span>'+
+                '<div class="img-hover">'+
+                  '<div class="card-img1-cover"></div>'+
+                  '<div class="card-profile text-center">'+
+                    '<div class="float-username">'+
+                      '<p class="card-imgTitle1">'+
+                        //'@'+item.username+''+
+                      '</p>'+
+                    '</div>'+
+                  '</div>'+
+                  '<div class="card-imgLabel1 text-center">'+
+                    '<h5 class="card-imgNum1">'+
+                      /*'<span><i class="fa fa-heart"></i>&nbsp;</span>'+
+                      '<span>'+$.number(item.totalLike)+'</span>&nbsp;&nbsp;'+
+                      '<span><i class="fa fa-commenting">&nbsp;</i></span>'+
+                      '<span>'+$.number(item.totalComment)+'</span>'+*/
+                    '</h5>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'+
+            '</a>'+
+          '</div>';
+          }else{
+            content+=
+                '<div class="col-sm-6 col-custom img-gallery detect-width">'+
+                '<span style="float: left;font-weight: bold;">#'+j+'</span>'+
+            '<a href="'+item.id+'" class="media-id" data-type="3" data-toggle="modal" data-target="#modal-box-ig">'+
+              '<div class="well auto-height no-padding" style="background-image: url('+item.imageLowRes+'), url(images/image_deleted.png);">'+
+                '<div class="img-hover">'+
+                  '<div class="card-img1-cover"></div>'+
+                  '<div class="card-profile text-center">'+
+                    '<div class="float-username">'+
+                      '<p class="card-imgTitle1">'+
+                        //'@'+item.username+''+
+                      '</p>'+
+                    '</div>'+
+                  '</div>'+
+                  '<div class="card-imgLabel1 text-center">'+
+                    '<h5 class="card-imgNum1">'+
+                      /*'<span><i class="fa fa-heart"></i>&nbsp;</span>'+
+                      '<span>'+$.number(item.totalLike)+'</span>&nbsp;&nbsp;'+
+                      '<span><i class="fa fa-commenting">&nbsp;</i></span>'+
+                      '<span>'+$.number(item.totalComment)+'</span>'+*/
+                    '</h5>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'+
+            '</a>'+
+          '</div>';
+          }
+          j++;
+        });
+         if(obj.length == 0){
+           $("#media-container-comment").html(noContent);
+         }else{
+           $('#media-container-comment').html(content);
+         }
+      }
+  });
+}
+
+
+function typeLike() {
+
+
+  var typeLike = [];
+  var json = [{"id":"image","totalLike":1225,"value":9},{"id":"carousel","totalLike":397,"value":4}];
+
+
+           _.each(json, function(item){
+             if(item.totalLike == 0){
+
+             }else{
+               typeLike.push({"name":item.id,"y":item.totalLike});
+             }
+             });
+
+           Highcharts.chart('liked',{
+              chart: {
+                  plotBackgroundColor: null,
+                  plotBorderWidth: null,
+                  plotShadow: false,
+                  type: 'pie',
+                  height: 190,
+                  width: 250
+              },
+              title: {
+                  text: ''
+              },
+              colors: ['#0071bc', '#ffac33', '#90ee7e'],
+              credits: {
+                  enabled: false
+              },
+            navigation: {
+                buttonOptions:{
+                  enabled: false
+                }
+              },
+            tooltip: {
+                  pointFormat: '{series.name}: <b>{point.y}</b>',
+                  /* {point.percentage:.2f}% */
+                  backgroundColor: '#FFFFFF'
+              },
+              legend: {
+                itemMarginBottom: 10,
+                itemStyle: {
+                  "fontSize": "10px"
+                }
+              },
+              plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    showInLegend: true,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.percentage:.2f} %',
+                        /* <b>{point.name}</b>:  */
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                            fontFamily: 'Larsseitlight, sans-serif', lineHeight: '18px'
+                        }
+                    }
+                },
+                series: {
+                    cursor: 'pointer',
+                    point: {
+                        events: {
+                            click: function () {
+                              firstLoad = 10;
+                              console.log(this.x);
+                              loadTweet(this.x, 0);
+                            }
+                        }
+                    }
+                },
+            },
+              series: [{
+                  name: 'Like',
+                  colorByPoint: true,
+                  data: typeLike
+              }]
+          });
+
+}
+
+function typeComment() {
+
+
+ var typeComment = [];
+  var json = [{"id":"image","totalComment":38,"value":9},{"id":"carousel","totalComment":6,"value":4}];
+
+
+           _.each(json, function(item){
+             if(item.totalComment == 0){
+
+             }else{
+               typeComment.push({"name":item.id,"y":item.totalComment});
+             }
+             });
+
+            $('#commented').highcharts({
+              chart: {
+                  plotBackgroundColor: null,
+                  plotBorderWidth: null,
+                  plotShadow: false,
+                  type: 'pie',
+                  height: 190,
+                  width: 250
+              },
+              title: {
+                  text: ''
+              },
+              colors: ['#0071bc', '#ffac33', '#90ee7e'],
+              credits: {
+                  enabled: false
+              },
+            navigation: {
+                buttonOptions:{
+                  enabled: false
+                }
+              },
+            tooltip: {
+                  pointFormat: '{series.name}: <b>{point.y}</b>',
+                  /* {point.percentage:.2f}% */
+                  backgroundColor: '#FFFFFF'
+              },
+              legend: {
+                itemMarginBottom: 10,
+                itemStyle: {
+                  "fontSize": "10px"
+                }
+              },
+              plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    showInLegend: true,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.percentage:.1f} %',
+                        /* <b>{point.name}</b>:  */
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                            fontFamily: 'Larsseitlight, sans-serif', lineHeight: '18px'
+                        }
+                    }
+                },
+                series: {
+                    cursor: 'pointer',
+                    point: {
+                        events: {
+                            click: function () {
+                              firstLoad = 10;
+                              console.log(this.x);
+                              loadTweet(this.x, 0);
+                            }
+                        }
+                    }
+                },
+            },
+              series: [{
+                  name: 'Comment',
+                  colorByPoint: true,
+                  data: typeComment
+              }]
+          });
+
+
+}
+
+  	function getQueryVariable(variable){
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+	}
+
+	var startDate = getQueryVariable("start");
+	var endDate = getQueryVariable("end");
+	var project_id = getQueryVariable("id");
+	var user_id = getQueryVariable("userid");
+
+	$(".dateProject").text(moment(startDate).format('DD MMM') + " - " + moment(endDate).format('DD MMM YYYY'));
+
+	function folUp() {
+	    document.getElementById("folUp").style.display = '';
+	    document.getElementById("folDown").style.display = 'none';
+	    document.getElementById("folNet").style.display = 'none';
+	}
+
+	function folDown() {
+	    document.getElementById("folDown").style.display = '';
+	    document.getElementById("folUp").style.display = 'none';
+	    document.getElementById("folNet").style.display = 'none';
+	}
+
+	function folNet() {
+	    document.getElementById("folNet").style.display = '';
+	    document.getElementById("folUp").style.display = 'none';
+	    document.getElementById("folDown").style.display = 'none';
+	}
+
+	function postDown() {
+	    document.getElementById("postDown").style.display = '';
+	    document.getElementById("postUp").style.display = 'none';
+	    document.getElementById("postNet").style.display = 'none';
+	}
+
+	function postUp() {
+	    document.getElementById("postUp").style.display = '';
+	    document.getElementById("postDown").style.display = 'none';
+	    document.getElementById("postNet").style.display = 'none';
+	}
+
+	function postNet() {
+	    document.getElementById("postNet").style.display = '';
+	    document.getElementById("postUp").style.display = 'none';
+	    document.getElementById("postDown").style.display = 'none';
+	}
+
+	function conUp() {
+	    document.getElementById("conUp").style.display = '';
+	    document.getElementById("conDown").style.display = 'none';
+	    document.getElementById("conNet").style.display = 'none';
+	}
+
+	function conDown() {
+	    document.getElementById("conDown").style.display = '';
+	    document.getElementById("conUp").style.display = 'none';
+	    document.getElementById("conNet").style.display = 'none';
+	}
+
+	function conNet() {
+	    document.getElementById("conNet").style.display = '';
+	    document.getElementById("conUp").style.display = 'none';
+	    document.getElementById("conDown").style.display = 'none';
+	}
+
+	function likeDown() {
+	    document.getElementById("likeDown").style.display = '';
+	    document.getElementById("likeUp").style.display = 'none';
+	    document.getElementById("likeNet").style.display = 'none';
+	}
+
+	function likeUp() {
+	    document.getElementById("likeUp").style.display = '';
+	    document.getElementById("likeDown").style.display = 'none';
+	    document.getElementById("likeNet").style.display = 'none';
+	}
+
+	function likeNet() {
+	    document.getElementById("likeNet").style.display = '';
+	    document.getElementById("likeUp").style.display = 'none';
+	    document.getElementById("likeDown").style.display = 'none';
+	}
+
+	function reachUp() {
+	    document.getElementById("reachUp").style.display = '';
+	    document.getElementById("reachDown").style.display = 'none';
+	    document.getElementById("reachNet").style.display = 'none';
+	}
+
+	function reachDown() {
+	    document.getElementById("reachDown").style.display = '';
+	    document.getElementById("reachUp").style.display = 'none';
+	    document.getElementById("reachNet").style.display = 'none';
+	}
+
+	function reachNet() {
+	    document.getElementById("reachNet").style.display = '';
+	    document.getElementById("reachUp").style.display = 'none';
+	    document.getElementById("reachDown").style.display = 'none';
+	}
+
+	function comDown() {
+	    document.getElementById("comDown").style.display = '';
+	    document.getElementById("comUp").style.display = 'none';
+	    document.getElementById("comNet").style.display = 'none';
+	}
+
+	function comUp() {
+	    document.getElementById("comUp").style.display = '';
+	    document.getElementById("comDown").style.display = 'none';
+	    document.getElementById("comNet").style.display = 'none';
+	}
+
+	function comNet() {
+	    document.getElementById("comNet").style.display = '';
+	    document.getElementById("comUp").style.display = 'none';
+	    document.getElementById("comDown").style.display = 'none';
+	}
+
+	function exUp() {
+	    document.getElementById("exUp").style.display = '';
+	    document.getElementById("exDown").style.display = 'none';
+	    document.getElementById("exNet").style.display = 'none';
+	}
+
+	function exDown() {
+	    document.getElementById("exDown").style.display = '';
+	    document.getElementById("exUp").style.display = 'none';
+	    document.getElementById("exNet").style.display = 'none';
+	}
+
+	function exNet() {
+	    document.getElementById("exNet").style.display = '';
+	    document.getElementById("exUp").style.display = 'none';
+	    document.getElementById("exDown").style.display = 'none';
+	}
+
+	function done() {
+	    $(".btn").remove();
+	}
+
+  	$(document).ready(function(){
+
+  	totalFollowers();
+  	totalPost();
+  	totalLike();
+	  totalComment();
+	  averageLike();
+	  averageComment();
+	  averageFollower();
+
+	  likerChart();
+	  commentatorChart();
+	  likerTable();
+	  commentatorTable();
+
+	  typeLike();
+	  typeComment();
+
+	  showMediaByLike();
+	  showMediaByComment();
+
+	  $(document).find('img.image-right-ig').click(function(){
+          var url = prompt("Input URL Image Logo", "");
+          if(url.length == 0){
+
+          }else{
+            $(document).find('img.image-right-ig').attr('src', url);
+          }
+      });
+
+      $(document).find('.footer .well.tweets').click(function(){
+          var url = prompt("Input URL Image Logo", "");
+          if(url.length == 0){
+
+          }else{
+            $(document).find('.footer .well.tweets').css({
+              'background':'url('+url+')',
+              'background-size': '100% 63px',
+              'background-position': 'center',
+              'padding': '5px 10px'
+            });
+          }
+        });
+
+		$( "#one" ).blur(function() {
+	    	$(".two").text(parseInt($(this).text())+1);
+	    	$(".three").text(parseInt($(this).text())+2);
+	    	$(".four").text(parseInt($(this).text())+3);
+	    	$(".five").text(parseInt($(this).text())+4);
+	    	$(".six").text(parseInt($(this).text())+5);
+	    	$(".seven").text(parseInt($(this).text())+6);
+		});
+
+		//Top Title
+        var topTitle = $('.top-title').html();
+        $('.top-title').blur(function() {
+            if (topTitle!=$(this).html()){
+                topTitle = $(this).html();
+                $('.top-title').html(topTitle);
+            }
+        });
+
+        //Top Subtitle
+        var topSubtitle = $('.top-subtitle').html();
+        $('.top-subtitle').blur(function() {
+            if (topSubtitle!=$(this).html()){
+                topSubtitle = $(this).html();
+                $('.top-subtitle').html(topSubtitle);
+            }
+        });
+
+        //Head Center
+        var headCenter = $('.head-center').html();
+        $('.head-center').blur(function() {
+            if (headCenter!=$(this).html()){
+                headCenter = $(this).html();
+                $('.head-center').html(headCenter);
+            }
+        });
+
+        //Bottom Title
+        var bottomTitle = $('.bottom-title').html();
+        $('.bottom-title').blur(function() {
+            if (bottomTitle!=$(this).html()){
+                bottomTitle = $(this).html();
+                $('.bottom-title').html(bottomTitle);
+            }
+        });
+
+        //Bottom GDILab
+        var bottomGDI = $('.bottom-gdilab').html();
+        $('.bottom-gdilab').blur(function() {
+            if (bottomGDI!=$(this).html()){
+                bottomGDI = $(this).html();
+                $('.bottom-gdilab').html(bottomGDI);
+            }
+        });
+
+  });
+
+  /*]]>*/
+</script>
+
+    </div>
+
+
+    <script type="text/javascript">
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF'.split('');
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // Keyword Mapping Function
+    function keywordMapping(container, json){
+      var list = [];
+      var count = 10;
+      var values = 100;
+
+      values = json[0].count;
+      $.each(json, function(i, item){
+        count = Math.round((this.count / values) * 100);
+        if(count < 18) { count = 18; } else { count = count; }
+            list.push([this.term, count]);
+      });
+
+      //console.log(list);
+
+      var $canvas = $(container);
+      var width = 500;
+      var height = width;
+      $canvas.attr('width', width);
+      $canvas.attr('height', height);
+      var options = {
+        list : list,
+        gridSize: Math.round(10 * $(container).width() / width),
+        weightFactor: function (size) {
+          return Math.pow(size, 0.9) * $(container).width() / width;
+        },
+        fontFamily: '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
+        color: '#000',
+        fontWeight : 'bold',
+        rotateRatio : 0,
+        shape : 'square',
+        backgroundColor: 'transparent',
+      };
+     WordCloud($(container)[0], options);
+     list = [];
+    }
+
+    function abbreviateNumber(value) {
+        var newValue = value;
+        if (value >= 1000) {
+            var suffixes = ["", "K", "M", "B","T"];
+            var suffixNum = Math.floor( (""+value).length/3 );
+            var shortValue = '';
+            for (var precision = 2; precision >= 1; precision--) {
+                shortValue = parseFloat( (suffixNum != 0 ? (value / Math.pow(1000,suffixNum) ) : value).toPrecision(precision));
+                var dotLessShortValue = (shortValue + '').replace(/[^a-zA-Z 0-9]+/g,'');
+                if (dotLessShortValue.length <= 2) { break; }
+            }
+            if (shortValue % 1 != 0)  shortNum = shortValue.toFixed(1);
+            newValue = shortValue+suffixes[suffixNum];
+        }
+        return newValue;
+    }
+
+    $(document).ready(function(){
+
+        $( "#one" ).blur(function() {
+             $(".two").text(parseInt($(this).text())+1);
+             $(".three").text(parseInt($(this).text())+2);
+             $(".four").text(parseInt($(this).text())+3);
+             $(".five").text(parseInt($(this).text())+4);
+             $(".six").text(parseInt($(this).text())+5);
+             $(".seven").text(parseInt($(this).text())+6);
+        });
+
+        //Top Title
+        var topTitle = $('.top-title').html();
+        $('.top-title').blur(function() {
+            if (topTitle!=$(this).html()){
+                topTitle = $(this).html();
+                $('.top-title').html(topTitle);
+            }
+        });
+
+        //Top Subtitle
+        var topSubtitle = $('.top-subtitle').html();
+        $('.top-subtitle').blur(function() {
+            if (topSubtitle!=$(this).html()){
+                topSubtitle = $(this).html();
+                $('.top-subtitle').html(topSubtitle);
+            }
+        });
+
+        //Head Center
+        var headCenter = $('.head-center').html();
+        $('.head-center').blur(function() {
+            if (headCenter!=$(this).html()){
+                headCenter = $(this).html();
+                $('.head-center').html(headCenter);
+            }
+        });
+
+        //Bottom Title
+        var bottomTitle = $('.bottom-title').html();
+        $('.bottom-title').blur(function() {
+            if (bottomTitle!=$(this).html()){
+                bottomTitle = $(this).html();
+                $('.bottom-title').html(bottomTitle);
+            }
+        });
+
+        //Bottom GDILab
+        var bottomGDI = $('.bottom-gdilab').html();
+        $('.bottom-gdilab').blur(function() {
+            if (bottomGDI!=$(this).html()){
+                bottomGDI = $(this).html();
+                $('.bottom-gdilab').html(bottomGDI);
+            }
+        });
+
+        $(document).find('img.image-right').click(function(){
+          var url = prompt("Input URL Image Logo", "");
+          if(url.length == 0){
+
+          }else{
+            $(document).find('img.image-right').attr('src', url);
+          }
+        });
+
+        $(document).find('.footer .well.tweets').click(function(){
+          var url = prompt("Input URL Image Logo", "");
+          if(url.length == 0){
+
+          }else{
+            $(document).find('.footer .well.tweets').css({
+              'background':'url('+url+')',
+              'background-size': '100% 63px',
+              'background-position': 'center',
+              'padding': '5px 10px'
+            });
+          }
+        });
+
+        $(document).find('.delete-this-tweet').click(function(){
+          var r = confirm("Delete this Tweet?");
+          if (r == true) {
+              $(this).remove();
+          } else {
+              txt = "You pressed Cancel!";
+          }
+        });
+
+        $('a[href*=\\#]:not([href=\\#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+
+    });
+    </script>
+  </body>
+</html>
