@@ -6,14 +6,14 @@
     <title>socialmeter.id</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script type="text/javascript" src="http://mail2yogie.localhost/script/jquery.js"></script>
+    <script type="text/javascript" src="./script/jquery.js"></script>
     <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script type="text/javascript" src="http://mail2yogie.localhost/script/moment.js"></script>
-    <script type="text/javascript" src="http://mail2yogie.localhost/script/wordcloud2.js"></script>
-    <script type="text/javascript" src="http://mail2yogie.localhost/script/underscore.js"></script>
-    <script type="text/javascript" src="http://mail2yogie.localhost/script/jquery.number.js"></script>
+    <script type="text/javascript" src="./script/moment.js"></script>
+    <script type="text/javascript" src="./script/wordcloud2.js"></script>
+    <script type="text/javascript" src="./script/underscore.js"></script>
+    <script type="text/javascript" src="./script/jquery.number.js"></script>
     <style>
       @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
       body, h1, h2, h3, h4, h5, h6{
@@ -29,11 +29,13 @@
       .highcharts-no-data text{
         font-size: 20px !important;
       }
-      @media print {
-        .page-break {
-          page-break-inside: avoid;
-          page-break-after: always;
-        }
+      .page-break, page {
+        page-break-inside: avoid;
+        page-break-after: always;
+        width: 100%;
+        height: 100%;
+        display: block;
+        overflow-y:hidden;
       }
       path.highcharts-tracker { display:none; }
       g.highcharts-tracker, g.highcharts-tooltip, path[isShadow] { display:none; }
