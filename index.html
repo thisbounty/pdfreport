@@ -35,7 +35,7 @@
         width: 100%;
         height: 100%;
         display: block;
-        overflow-y:hidden;
+        overflow:hidden;
       }
       path.highcharts-tracker { display:none; }
       g.highcharts-tracker, g.highcharts-tooltip, path[isShadow] { display:none; }
@@ -230,7 +230,6 @@
 
        <!-- Page -->
 
-       <br/>
       <page size="A4">
 
         <!-- Header -->
@@ -280,7 +279,7 @@
              </div>
              <div class="col-xs-10 col-xs-offset-1">
                 <div class="row">
-                    <div class="col-xs-9">
+                    <div class="col-xs-12">
                     <br />
                       <h4 style="margin-bottom:5px;"><b>Saran & Tugas Minggu ini</b></h4>
                       <p class="top-writing">Rangkuman informasi mengenai aktivitas yang terjadi pada akun Twitter.</p>
@@ -1275,10 +1274,10 @@
 									<h5 class="pull-left title-chart">Comment User Profile Percentage</h5>
 								</div>
 								<div id="commentator" style="width: 95%"></div>
-								<div style="margin-top: -10px;">
+								<div style="margin-top: -10px; display:none;">
 									<h5 class="pull-left title-chart">Top 10 Comment User</h5>
 								</div>
-								<table id="tbl-commentator" class="table table-striped tbl-liker">
+								<table id="tbl-commentator" class="table table-striped tbl-liker" style="display:none;">
 					            	<tbody>
 
 					            	</tbody>
@@ -1324,7 +1323,7 @@
     </div>
     <!-- Page -->
 
-  <div class="pages">
+  <div class="pages page-break">
 
     <!--header-->
       <br/>
@@ -1356,8 +1355,6 @@
         </div>  <!-- Copy New HEADER 1 END -->
         <!-- End Header -->
 
-      <div style="clear:both"></div>
-
       <!-- Content -->
       <div class="row-fluid">
         <div class="col-xs-10 col-xs-offset-1">
@@ -1370,7 +1367,6 @@
                   <p class="top-writing">
                     Informasi kuantitatif tentang media yang digunakan user dalam menyajikan postingan, baik foto maupun video, melalui perbandingan persentase, jumlah likes, dan jumlah komentar.
                   </p>
-                  <br/>
                 </div>
                 <div class="col-xs-5 col-xs-offset-1">
                   <h4 style="margin-bottom:5px;"><b>Saran & Tugas Minggu ini</b></h4>
@@ -1762,7 +1758,7 @@ function likerTable(){
          if(json.length == 0){
            $("table#tbl-liker").html(noContent);
          }else{
-           $('table#tbl-liker tbody').html(content);
+          // $('table#tbl-liker tbody').html(content);
          }
          },
          complete : function(data){
@@ -1853,7 +1849,7 @@ function showMediaByLike(subMedia){
         $.each(obj, function(i, item){
         if(item.type == 'video'){
             content+=
-                '<div class="col-sm-6 col-custom img-gallery detect-width">'+
+                '<div class="col-xs-1 col-custom img-gallery detect-width">'+
                 '<span style="float: left;font-weight: bold;">#'+j+'</span>'+
             '<a href="'+item.id+'" class="media-id" data-type="2" data-toggle="modal" data-target="#modal-box-ig">'+
               '<div class="well auto-height no-padding" style="background-image: url('+item.imageLowRes+'), url(images/image_deleted.png);">'+
@@ -1881,7 +1877,7 @@ function showMediaByLike(subMedia){
           '</div>';
           }else{
             content+=
-                '<div class="col-sm-6 col-custom img-gallery detect-width">'+
+                '<div class="col-xs-1 col-custom img-gallery detect-width">'+
                 '<span style="float: left;font-weight: bold;">#'+j+'</span>'+
             '<a href="'+item.id+'" class="media-id" data-type="2" data-toggle="modal" data-target="#modal-box-ig">'+
               '<div class="well auto-height no-padding" style="background-image: url('+item.imageLowRes+'), url(images/image_deleted.png);">'+
@@ -1947,7 +1943,7 @@ function showMediaByComment(subMedia){
         $.each(obj, function(i, item){
           if(item.type == 'video'){
             content+=
-                '<div class="col-sm-6 col-custom img-gallery detect-width">'+
+                '<div class="col-xs-1 col-custom img-gallery detect-width">'+
                 '<span style="float: left;font-weight: bold;">#'+j+'</span>'+
             '<a href="'+item.id+'" class="media-id" data-type="3" data-toggle="modal" data-target="#modal-box-ig">'+
               '<div class="well auto-height no-padding" style="background-image: url('+item.imageLowRes+'), url(images/image_deleted.png);">'+
@@ -1975,7 +1971,7 @@ function showMediaByComment(subMedia){
           '</div>';
           }else{
             content+=
-                '<div class="col-sm-6 col-custom img-gallery detect-width">'+
+                '<div class="col-xs-1 col-custom img-gallery detect-width">'+
                 '<span style="float: left;font-weight: bold;">#'+j+'</span>'+
             '<a href="'+item.id+'" class="media-id" data-type="3" data-toggle="modal" data-target="#modal-box-ig">'+
               '<div class="well auto-height no-padding" style="background-image: url('+item.imageLowRes+'), url(images/image_deleted.png);">'+
